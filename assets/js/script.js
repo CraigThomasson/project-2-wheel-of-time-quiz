@@ -1,5 +1,5 @@
 /**
- * calls easygame mod fuction ad genrates a random easy question
+ * generates a random easy question and answer
  */
 function easyMode() {
 
@@ -15,11 +15,17 @@ let answersEasy = [
     ["Harp", "Flute", "fiddle", "Triangle"]
 ];
 
+/**
+ * gets a random question from questionEasy
+ */
 function loadQuestion() {
     let questionGen = Math.floor(Math.random() * questionsEasy.length);
     document.getElementById("question").innerHTML = questionsEasy[questionGen];
 }
 
+/**
+ * get the maching answers for the question
+ */
 function loadAnswers() {
     let answers = document.getElementById("answer-container");
     if (document.getElementById("question").innerText === questionsEasy[0]) {
