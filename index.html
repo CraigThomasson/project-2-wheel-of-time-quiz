@@ -5,17 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/style.css">
-    <title>alphabet memory
-    </title>
+    <title>alphabet memory</title>
 </head>
 <body>
     <header>
         <h1>Quiz</h1>
     </header>
     <div class="difaculty">
-        <button>Easy</button>
-        <button>Medium</button>
-        <button>Hard</button>
+        <button data-type="easy">Easy</button>
+        <button data-type="medium">Medium</button>
+        <button data-type="hard">Hard</button>
     </div>
    <section id=game-board>
         <div class="questions-card">
@@ -25,6 +24,7 @@
         <div class="answers">
            <h3>Answer:</h3>
            <div id="answer-container"></div>
+           <button data-type="submit">Submit</button>
         </div>
 
    </section>

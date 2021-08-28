@@ -1,3 +1,33 @@
+
+//loads game and event listeners. 
+//code largely influenced by code institutes love maths project
+document.addEventListener("DOMContentLoaded", function() {
+    let buttons = document.getElementsByTagName("button");
+
+    for (let button of buttons) {
+        button.addEventListener("click", function() {
+            if (this.getAttribute("data-type") === "submit") {
+                checkAnswer();
+            } else {
+                let gameDif = this.getAttribute("data-type");
+                runGame(gameDif);
+            }
+        });
+    }
+
+    document.getElementById("answer-container").addEventListener("keydown", function(event) {
+        if (event.key === "Enter") {
+            checkAnswer()
+        }
+    })
+
+    runGame("easyMode");
+
+});
+
+function runGame(gameDif)
+
+
 /**
  * generates a random easy question and answer
  */
