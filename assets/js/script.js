@@ -14,18 +14,23 @@ document.addEventListener("DOMContentLoaded", function() {
             }
         });
     }
-
-    document.getElementById("answer-container").addEventListener("keydown", function(event) {
-        if (event.key === "Enter") {
-            checkAnswer()
-        }
     })
 
-    runGame("easyMode");
+    runGame("easy");
 
-});
 
-function runGame(gameDif)
+function runGame(gameDif) {
+    if (gameDif === "easy") {
+        easyMode();
+    } else if (gameDif === "medium") {
+        mediumMode();
+    } else if (gameDif === "hard") {
+        hardMode();
+    } else {
+        alert(`unknow difaculty: ${gameDif}`)
+        throw `unkown game difaculty; ${gameDif}. aborting!`
+    }
+}
 
 
 /**
@@ -52,6 +57,7 @@ function loadQuestion() {
     let questionGen = Math.floor(Math.random() * questionsEasy.length);
     document.getElementById("question").innerHTML = questionsEasy[questionGen];
 }
+
 
 /**
  * get the maching answers for the question
@@ -82,5 +88,3 @@ loadQuestion();
 
 loadAnswers();
 };
-
-easyMode();
