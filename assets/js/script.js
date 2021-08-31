@@ -14,10 +14,7 @@ document.addEventListener("DOMContentLoaded", function() {
             }
         });
     }
-    })
-
-    runGame("easy");
-
+    });
 
 function runGame(gameDif) {
     if (gameDif === "easy") {
@@ -32,8 +29,6 @@ function runGame(gameDif) {
     }
 }
 
-
-
 /**
  * generates a random easy question and answer
  */
@@ -44,14 +39,17 @@ let qAEasySet =
   {
     question: "What name is given to someone bonded to an Aes Sedai?",
     answers:["Warder", "Asha'man", "Guardian", "Grey man"],
+    corectAnswer: 0
   },
   {
     question:"What item does Matt take from Shadar Logoth?",
     answers: ["Gold coin", "Silver dice set", "Ruby-hilted dagger", "Crystal sward "],
-  },
+    corectAnswer: 2 
+    },
   {
     question: "Rand learns to play which instrument?",
     answers: ["Harp", "Flute", "fiddle", "Triangle"],
+    corectAnswer: 0
   }
 ];
 
@@ -67,6 +65,12 @@ function loadQuestion() {
         <button id="btn1" class="answer-btn">${qAEasySet[questionGen]["answers"][1]}</button>
         <button id="btn2" class="answer-btn">${qAEasySet[questionGen]["answers"][2]}</button>
         <button id="btn3" class="answer-btn">${qAEasySet[questionGen]["answers"][3]}</button>`
+    qAEasySet.splice(questionGen,1);
+    console.log(qAEasySet)
 };
 loadQuestion();
 };
+
+function checkAnswer() {
+    
+}
