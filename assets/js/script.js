@@ -59,6 +59,7 @@ let qAEasySet =
 function loadQuestion() {
     let questionGen = Math.floor(Math.random() * qAEasySet.length);
     let answers = document.getElementById("answer-container");
+    let correctAnswer = qAEasySet[questionGen][corectAnswer]
     document.getElementById("question").innerHTML = qAEasySet[questionGen]["question"];
      answers.innerHTML = 
         `<button id="btn0" class="answer-btn">${qAEasySet[questionGen]["answers"][0]}</button>
@@ -71,6 +72,18 @@ function loadQuestion() {
 loadQuestion();
 };
 
-function checkAnswer() {
+function getAnswer() {
+        let buttons = document.getElementsByTagName("button");
     
+        for (let button of buttons) {
+            button.addEventListener("click", function() {
+                if (this.value === 
+                    checkAnswer();
+                } else {
+                    let gameDif = this.getAttribute("data-type");
+                    runGame(gameDif);
+                }
+            });
+        }
+        });
 }
