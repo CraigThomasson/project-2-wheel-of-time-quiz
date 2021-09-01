@@ -16,6 +16,15 @@ document.addEventListener("DOMContentLoaded", function() {
     }
     });
 
+function userAnswer() {
+    let answers = document.getElementsByClassName("answer-btn")
+    for (let answer of answers) {
+        answer.addEventListener("click", () => {
+            answer.classList.add("selected");
+        })
+    };
+}
+
 function runGame(gameDif) {
     if (gameDif === "easy") {
         easyMode();
@@ -59,7 +68,6 @@ let qAEasySet =
 function loadQuestion() {
     let questionGen = Math.floor(Math.random() * qAEasySet.length);
     let answers = document.getElementById("answer-container");
-    let correctAnswer = qAEasySet[questionGen][corectAnswer]
     document.getElementById("question").innerHTML = qAEasySet[questionGen]["question"];
      answers.innerHTML = 
         `<button id="btn0" class="answer-btn">${qAEasySet[questionGen]["answers"][0]}</button>
@@ -67,23 +75,9 @@ function loadQuestion() {
         <button id="btn2" class="answer-btn">${qAEasySet[questionGen]["answers"][2]}</button>
         <button id="btn3" class="answer-btn">${qAEasySet[questionGen]["answers"][3]}</button>`
     qAEasySet.splice(questionGen,1);
+    userAnswer();
     console.log(qAEasySet)
 };
 loadQuestion();
 };
 
-function getAnswer() {
-        let buttons = document.getElementsByTagName("button");
-    
-        for (let button of buttons) {
-            button.addEventListener("click", function() {
-                if (this.value === 
-                    checkAnswer();
-                } else {
-                    let gameDif = this.getAttribute("data-type");
-                    runGame(gameDif);
-                }
-            });
-        }
-        });
-}

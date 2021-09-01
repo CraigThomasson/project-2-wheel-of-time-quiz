@@ -13,3 +13,7 @@ body {
     border: 3px solid black;
     height: 20vh;
 }
+
+.selected {
+    background-color: blue;
+}
