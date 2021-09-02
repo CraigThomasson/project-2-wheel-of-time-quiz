@@ -16,15 +16,37 @@ document.addEventListener("DOMContentLoaded", function() {
     }
     });
 
+    /**
+     * this adds the selected class to a anserbutton when clicked by the user.
+     * it also calls the clearselected function to remove the selected class from other buttons.
+     */
 function userAnswer() {
     let answers = document.getElementsByClassName("answer-btn")
     for (let answer of answers) {
         answer.addEventListener("click", () => {
+            clearSelected();
             answer.classList.add("selected");
         })
     };
-}
+};
 
+/**
+ * clears the selcted class from buttons if a sibling button is clicked.
+ */
+function clearSelected() {
+    let answers = document.getElementsByClassName("answer-btn")
+    for (let answer of answers) {
+        let sibs = answer.parentElement.children;
+            for (let sib of sibs) {
+                if (sib.classList === "answer-btn selected");
+                sib.classList.remove("selected");
+            };
+    };
+};
+
+/**
+ * runs the difculty level the user selects.
+ */
 function runGame(gameDif) {
     if (gameDif === "easy") {
         easyMode();
@@ -39,7 +61,7 @@ function runGame(gameDif) {
 }
 
 /**
- * generates a random easy question and answer
+ * generates  random easy questions and answers
  */
 function easyMode() {
 
