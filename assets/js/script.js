@@ -65,10 +65,12 @@ function clearSelected() {
 function checkAnswer(i) {
     let submitBtn = document.getElementById("submit-btn");
     submitBtn.addEventListener("click", () => {
-        let selctedAnswer = document.getElementsByClassName("selected").innerHTML;
-        if (selctedAnswer === i) {
+        let selctedAnswer = document.getElementsByClassName("selected");
+        let text = selctedAnswer[0].getAttribute("value");
+        console.log(text);
+        if (text === i) {
             alert(`Weldone!`);
-        } else if (selctedAnswer !== i) {
+        } else if (text !== i) {
             alert(`Nope`);
         }
     })
@@ -104,10 +106,10 @@ function loadQuestion() {
     let answers = document.getElementById("answer-container");
     document.getElementById("question").innerHTML = qAEasySet[questionGen]["question"];
      answers.innerHTML = 
-        `<button id="btn0" class="answer-btn">${qAEasySet[questionGen]["answers"][0]}</button>
-        <button id="btn1" class="answer-btn">${qAEasySet[questionGen]["answers"][1]}</button>
-        <button id="btn2" class="answer-btn">${qAEasySet[questionGen]["answers"][2]}</button>
-        <button id="btn3" class="answer-btn">${qAEasySet[questionGen]["answers"][3]}</button>`
+        `<input type=button id="btn0" class="answer-btn" value="${qAEasySet[questionGen]["answers"][0]}">
+        <input type=button id="btn1" class="answer-btn" value="${qAEasySet[questionGen]["answers"][1]}">
+        <input type=button id="btn2" class="answer-btn" value="${qAEasySet[questionGen]["answers"][2]}">
+        <input type=button id="btn3" class="answer-btn" value="${qAEasySet[questionGen]["answers"][3]}">`
     userAnswer();
     checkAnswer(corectAns);
     qAEasySet.splice(questionGen,1);
