@@ -2,13 +2,11 @@
 //loads game and event listeners. 
 //code largely influenced by code institutes love maths project
 document.addEventListener("DOMContentLoaded", function() {
-    let buttons = document.getElementsByTagName("button");
+    let buttons = document.getElementsByClassName("dif-btn");
 
     for (let button of buttons) {
         button.addEventListener("click", function() {
-            if (this.getAttribute("data-type") === "submit") {
-                checkAnswer();
-            } else {
+            if (this.getAttribute("data-type")) {
                 let gameDif = this.getAttribute("data-type");
                 runGame(gameDif);
             }
@@ -65,9 +63,9 @@ function clearSelected() {
 };
 
 function checkAnswer(i) {
-    let submitBtn = document.getElementById("submit-btn")
-    let selctedAnswer = document.getElementsByClassName("selected").innerHTML;
+    let submitBtn = document.getElementById("submit-btn");
     submitBtn.addEventListener("click", () => {
+        let selctedAnswer = document.getElementsByClassName("selected").innerHTML;
         if (selctedAnswer === i) {
             alert(`Weldone!`);
         } else if (selctedAnswer !== i) {
