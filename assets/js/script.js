@@ -71,14 +71,13 @@ function checkAnswer(i) {
     submitBtn.addEventListener("click", () => {
         let selctedAnswer = document.getElementsByClassName("selected");
         let text = selctedAnswer[0].getAttribute("value");
-        console.log(text);
         if (text === i) {
             correctBox()
         } else if (text !== i) {
-            alert(`Nope`);
+            incorrectBox();
         }
     })
-}
+};
 
 /**
  * hides question box and shows correct answer box and text when called.
@@ -88,7 +87,16 @@ function correctBox () {
     let answerBox = document.getElementById("answer-card");
     correctAnswerBox.style.display = "block";
     answerBox.style.display = "none";
-   
+};
+
+/**
+ * hides question box and shows incorrect answer box and text when called.
+ */
+function incorrectBox () {
+    let incorrectAnswerBox = document.getElementById("incorrect");
+    let answerBox = document.getElementById("answer-card");
+    incorrectAnswerBox.style.display = "block";
+    answerBox.style.display = "none";
 }
 
 /**
@@ -105,7 +113,7 @@ function runGame(gameDif) {
         alert(`unknow difaculty: ${gameDif}`)
         throw `unkown game difaculty; ${gameDif}. aborting!`
     }
-}
+};
 
 /**
  * generates  random easy questions and answers
