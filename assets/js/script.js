@@ -73,7 +73,7 @@ function checkAnswer(i) {
         let text = selctedAnswer[0].getAttribute("value");
         if (text === i) {
             correctBox()
-            loadQuestion(questionSet)
+            
         } else if (text !== i) {
             incorrectBox();
         }
@@ -124,19 +124,17 @@ function runGame(gameDif) {
 /**
  * gets a random question from selected question set
  */
- function loadQuestion(m) {
-    let questionGen = Math.floor(Math.random() * m.length);
-    let corectAns = m[questionGen]["corectAnswer"];
+ function loadQuestion(q, c, g) {
     let answers = document.getElementById("answer-container");
-    document.getElementById("question").innerHTML = m[questionGen]["question"];
+    document.getElementById("question").innerHTML = q[g]["question"];
      answers.innerHTML = 
-        `<input type=button id="btn0" class="answer-btn" value="${m[questionGen]["answers"][0]}">
-        <input type=button id="btn1" class="answer-btn" value="${m[questionGen]["answers"][1]}">
-        <input type=button id="btn2" class="answer-btn" value="${m[questionGen]["answers"][2]}">
-        <input type=button id="btn3" class="answer-btn" value="${m[questionGen]["answers"][3]}">`
+        `<input type=button id="btn0" class="answer-btn" value="${q[g]["answers"][0]}">
+        <input type=button id="btn1" class="answer-btn" value="${q[g]["answers"][1]}">
+        <input type=button id="btn2" class="answer-btn" value="${q[g]["answers"][2]}">
+        <input type=button id="btn3" class="answer-btn" value="${q[g]["answers"][3]}">`
     userAnswer();
-    checkAnswer(corectAns);
-    qAEasySet.splice(questionGen,1);
+    checkAnswer(c);
+    qAEasySet.splice(g,1);
 };
 
 /**
@@ -144,6 +142,8 @@ function runGame(gameDif) {
  */
 function easyMode() {
 let questionSet= qAEasySet;
-loadQuestion(questionSet);
+let questionGen = Math.floor(Math.random() * questionSet.length);
+let corectAns = questionSet[questionGen]["corectAnswer"];
+loadQuestion(questionSet, corectAns, questionGen);
 };
 
