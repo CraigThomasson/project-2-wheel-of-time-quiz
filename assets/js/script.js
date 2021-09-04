@@ -73,6 +73,7 @@ function checkAnswer(i) {
         let text = selctedAnswer[0].getAttribute("value");
         if (text === i) {
             correctBox()
+            loadQuestion(questionSet)
         } else if (text !== i) {
             incorrectBox();
         }
@@ -87,6 +88,11 @@ function correctBox () {
     let answerBox = document.getElementById("answer-card");
     correctAnswerBox.style.display = "block";
     answerBox.style.display = "none";
+    let next = document.getElementById("next-btn")
+    next.addEventListener("click", () => {
+        answerBox.style.display = "block";
+        correctAnswerBox.style.display = "none";
+    })
 };
 
 /**
@@ -100,7 +106,7 @@ function incorrectBox () {
 }
 
 /**
- * runs the difculty level the user selects.
+ * runs the dificulty level the user selects.
  */
 function runGame(gameDif) {
     if (gameDif === "easy") {
@@ -116,27 +122,28 @@ function runGame(gameDif) {
 };
 
 /**
- * generates  random easy questions and answers
+ * gets a random question from selected question set
  */
-function easyMode() {
-
-/**
- * gets a random question from qAEasySet
- */
-function loadQuestion() {
-    let questionGen = Math.floor(Math.random() * qAEasySet.length);
-    let corectAns = qAEasySet[questionGen]["corectAnswer"];
+ function loadQuestion(m) {
+    let questionGen = Math.floor(Math.random() * m.length);
+    let corectAns = m[questionGen]["corectAnswer"];
     let answers = document.getElementById("answer-container");
-    document.getElementById("question").innerHTML = qAEasySet[questionGen]["question"];
+    document.getElementById("question").innerHTML = m[questionGen]["question"];
      answers.innerHTML = 
-        `<input type=button id="btn0" class="answer-btn" value="${qAEasySet[questionGen]["answers"][0]}">
-        <input type=button id="btn1" class="answer-btn" value="${qAEasySet[questionGen]["answers"][1]}">
-        <input type=button id="btn2" class="answer-btn" value="${qAEasySet[questionGen]["answers"][2]}">
-        <input type=button id="btn3" class="answer-btn" value="${qAEasySet[questionGen]["answers"][3]}">`
+        `<input type=button id="btn0" class="answer-btn" value="${m[questionGen]["answers"][0]}">
+        <input type=button id="btn1" class="answer-btn" value="${m[questionGen]["answers"][1]}">
+        <input type=button id="btn2" class="answer-btn" value="${m[questionGen]["answers"][2]}">
+        <input type=button id="btn3" class="answer-btn" value="${m[questionGen]["answers"][3]}">`
     userAnswer();
     checkAnswer(corectAns);
     qAEasySet.splice(questionGen,1);
 };
-loadQuestion();
+
+/**
+ * generates  random easy questions and answers
+ */
+function easyMode() {
+let questionSet= qAEasySet;
+loadQuestion(questionSet);
 };
 
