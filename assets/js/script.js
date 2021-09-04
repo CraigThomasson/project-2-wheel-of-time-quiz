@@ -62,6 +62,10 @@ function clearSelected() {
     };
 };
 
+/**
+ * checks is selected answer is correct on click of submit button
+ * and responds with correct or incorrect answer box.
+ */
 function checkAnswer(i) {
     let submitBtn = document.getElementById("submit-btn");
     submitBtn.addEventListener("click", () => {
@@ -69,11 +73,22 @@ function checkAnswer(i) {
         let text = selctedAnswer[0].getAttribute("value");
         console.log(text);
         if (text === i) {
-            alert(`Weldone!`);
+            correctBox()
         } else if (text !== i) {
             alert(`Nope`);
         }
     })
+}
+
+/**
+ * hides question box and shows correct answer box and text when called.
+ */
+function correctBox () {
+    let correctAnswerBox = document.getElementById("correct");
+    let answerBox = document.getElementById("answer-card");
+    correctAnswerBox.style.display = "block";
+    answerBox.style.display = "none";
+   
 }
 
 /**
