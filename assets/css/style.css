@@ -14,10 +14,6 @@ body {
     height: 20vh;
 }
 
-.selected {
-    background-color: blue;
-}
-
 .card { 
     border: 3px solid black;
     height: 30vh;

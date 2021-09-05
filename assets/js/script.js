@@ -15,8 +15,7 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 );
 
-let qAEasySet = 
-[
+let easyQuestions = [
     {
     question: "What name is given to someone bonded to an Aes Sedai?",
     answers:["Warder", "Asha'man", "Guardian", "Grey man"],
@@ -41,20 +40,60 @@ let qAEasySet =
     question: "Which of these colours does not belong to and Ajar of the White Tower?",
     answers: ["green", "Purple", "Blue", "Red"],
     corectAnswer: "Purple"
+    },
+    {
+    question: "Hopper is a…? ",
+    answers: ["Tiger", "Rabbit", "Frog", "Wolf"],
+    corectAnswer: "Wolf"
     }
 ];
+
+let questionSet = [];
+let questionGen = "";
+function chooseQuestionList(modeSelect) {
+    if (modeSelect === "easymode") {
+        questionSet = easyQuestions;
+        console.log("question set", questionSet);
+    };
+}
+
+let answerSet = [];
+function chooseAnswerList(modeSelect) {
+    if (modeSelect === "easymode") {
+        answerSet = [
+            {
+            corectAnswer: "Warder"
+            },
+            {
+            corectAnswer: "Ruby-hilted dagger"
+            },
+            {
+            corectAnswer: "Flute"
+            },
+            {
+            corectAnswer: "Half moon axe"
+            },
+            {
+            corectAnswer: "Purple"
+            },
+            {
+            corectAnswer: "Wolf"
+            }
+        ];
+    }
+}
 
 /**
  * this adds the selected class to a anserbutton when clicked by the user.
  * it also calls the clearselected function to remove the selected class from other buttons.
  */
-function userAnswer(c, g) {
+function userAnswer(corectAns, mode) {
     let answers = document.getElementsByClassName("answer-btn")
     for (let answer of answers) {
         answer.addEventListener("click", () => {
             clearSelected();
             answer.classList.add("selected");
-            checkAnswer(c ,g);
+            checkAnswer(corectAns, mode);
         })
     };
 };
@@ -77,26 +116,25 @@ function clearSelected() {
  * checks is selected answer is correct on click of submit button
  * and responds with correct or incorrect answer box.
  */
-function checkAnswer(i, t) {
+function checkAnswer(corectAns, mode) {
     
     let selctedAnswer = document.getElementsByClassName("selected");
     let text = selctedAnswer[0].getAttribute("value");
-    if (text === i) {
-        correctBox(t);
+    if (text === corectAns) {
+        correctBox(mode);
         correctScore();
-        questionCounter()     
+        questionCounter(); 
     } else {
-        incorrectBox(t);
+        incorrectBox(mode);
         incorrectScore();
         questionCounter();
     }
-    
 };
 
 /**
  * hides question box and shows correct answer box and text when called.
  */
-function correctBox (t) {
+function correctBox (mode) {
     let correctAnswerBox = document.getElementById("correct");
     let answerBox = document.getElementById("answer-card");
     correctAnswerBox.style.display = "block";
@@ -106,14 +144,14 @@ function correctBox (t) {
         answerBox.style.display = "block";
         correctAnswerBox.style.display = "none";
         endQuiz()
-        runGame(t);
+        runGame(mode);
     })
 };
 
 /**
  * hides question box and shows incorrect answer box and text when called.
  */
-function incorrectBox (t) {
+function incorrectBox (mode) {
     let incorrectAnswerBox = document.getElementById("incorrect");
     let answerBox = document.getElementById("answer-card");
     incorrectAnswerBox.style.display = "block";
@@ -123,7 +161,7 @@ function incorrectBox (t) {
         answerBox.style.display = "block";
         incorrectAnswerBox.style.display = "none";
         endQuiz()
-        runGame(t);
+        runGame(mode);
     })
 };
 
@@ -146,14 +184,17 @@ function runGame(gameDif) {
 /**
  * gets a random question from selected question set
  */
- function loadQuestion(q, c, g) {
+ function loadQuestion(questions, questionRandom, corectAns, mode) {
     let answers = document.getElementById("answer-container");
-    document.getElementById("question").innerHTML = q[g]["question"];
-     answers.innerHTML = 
-        `<input type=button id="btn0" class="answer-btn" value="${q[g]["answers"][0]}">
-        <input type=button id="btn1" class="answer-btn" value="${q[g]["answers"][1]}">
-        <input type=button id="btn2" class="answer-btn" value="${q[g]["answers"][2]}">
-        <input type=button id="btn3" class="answer-btn" value="${q[g]["answers"][3]}">`
+    document.getElementById("question").innerHTML = questions[questionRandom]["question"];
+    answers.innerHTML = 
+        `<input type=button id="btn0" class="answer-btn" value="${questions[questionRandom]["answers"][0]}">
+        <input type=button id="btn1" class="answer-btn" value="${questions[questionRandom]["answers"][1]}">
+        <input type=button id="btn2" class="answer-btn" value="${questions[questionRandom]["answers"][2]}">
+        <input type=button id="btn3" class="answer-btn" value="${questions[questionRandom]["answers"][3]}">`;
+    userAnswer(corectAns, mode);
+    easyQuestions.splice(questionRandom,1);
+    console.log("loadquestion", questionSet);
 };
 
 /**
@@ -190,7 +231,7 @@ function endQuiz() {
     let endBox = document.getElementById("end-box")
     resetQuiz()
     document.getElementById("total").innerText = count;
-    if (count == 3) {
+    if (count == 5) {
         endBox.style.display = "block";
         correctAnswerBox.style.display = "none";
         answerBox.style.display = "none";
@@ -198,6 +239,9 @@ function endQuiz() {
     }
 };
 
+/**
+ * this reloads the page when called
+ */
 function resetQuiz() {
     let reset = document.getElementById("restart")
     reset.addEventListener("click", () => {
@@ -209,12 +253,12 @@ function resetQuiz() {
  * generates  random easy questions and answers
  */
 function easyMode() {
-let questionSet= qAEasySet;
-let questionGen = Math.floor(Math.random() * questionSet.length);
-let corectAns = questionSet[questionGen]["corectAnswer"];
-let easy = "easy";
-loadQuestion(questionSet, corectAns, questionGen);
-userAnswer(corectAns, easy);
-qAEasySet.splice(questionGen,1);
+    let mode = "easy"
+    chooseQuestionList("easymode")
+    chooseAnswerList("easymode")
+    questionGen = Math.floor(Math.random() * questionSet.length);
+    let corectAns = questionSet[questionGen]["corectAnswer"];
+    loadQuestion(questionSet, questionGen, corectAns, mode);
+    console.log("leasymoad", questionSet);
 };
 
