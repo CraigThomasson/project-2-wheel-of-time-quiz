@@ -38,12 +38,13 @@ let qAEasySet =
  * this adds the selected class to a anserbutton when clicked by the user.
  * it also calls the clearselected function to remove the selected class from other buttons.
  */
-function userAnswer() {
+function userAnswer(c, g) {
     let answers = document.getElementsByClassName("answer-btn")
     for (let answer of answers) {
         answer.addEventListener("click", () => {
             clearSelected();
             answer.classList.add("selected");
+            checkAnswer(c ,g);
         })
     };
 };
@@ -66,44 +67,52 @@ function clearSelected() {
  * checks is selected answer is correct on click of submit button
  * and responds with correct or incorrect answer box.
  */
-function checkAnswer(i) {
-    let submitBtn = document.getElementById("submit-btn");
-    submitBtn.addEventListener("click", () => {
-        let selctedAnswer = document.getElementsByClassName("selected");
-        let text = selctedAnswer[0].getAttribute("value");
-        if (text === i) {
-            correctBox()
-            
-        } else if (text !== i) {
-            incorrectBox();
-        }
-    })
+function checkAnswer(i, t) {
+    
+    let selctedAnswer = document.getElementsByClassName("selected");
+    console.log(selctedAnswer)
+    let text = selctedAnswer[0].getAttribute("value");
+    console.log("i:", i, " text:", text);
+    console.log(qAEasySet);
+    if (text === i) {
+        correctBox(t)           
+    } else {
+        incorrectBox(t);
+    }
+    
 };
 
 /**
  * hides question box and shows correct answer box and text when called.
  */
-function correctBox () {
+function correctBox (t) {
     let correctAnswerBox = document.getElementById("correct");
     let answerBox = document.getElementById("answer-card");
     correctAnswerBox.style.display = "block";
     answerBox.style.display = "none";
-    let next = document.getElementById("next-btn")
+    let next = document.getElementById("next-btn");
     next.addEventListener("click", () => {
         answerBox.style.display = "block";
         correctAnswerBox.style.display = "none";
+        runGame(t);
     })
 };
 
 /**
  * hides question box and shows incorrect answer box and text when called.
  */
-function incorrectBox () {
+function incorrectBox (t) {
     let incorrectAnswerBox = document.getElementById("incorrect");
     let answerBox = document.getElementById("answer-card");
     incorrectAnswerBox.style.display = "block";
     answerBox.style.display = "none";
-}
+    let next = document.getElementById("incorrect-next-btn");
+    next.addEventListener("click", () => {
+        answerBox.style.display = "block";
+        incorrectAnswerBox.style.display = "none";
+        runGame(t);
+    })
+};
 
 /**
  * runs the dificulty level the user selects.
@@ -132,9 +141,6 @@ function runGame(gameDif) {
         <input type=button id="btn1" class="answer-btn" value="${q[g]["answers"][1]}">
         <input type=button id="btn2" class="answer-btn" value="${q[g]["answers"][2]}">
         <input type=button id="btn3" class="answer-btn" value="${q[g]["answers"][3]}">`
-    userAnswer();
-    checkAnswer(c);
-    qAEasySet.splice(g,1);
 };
 
 /**
@@ -144,6 +150,10 @@ function easyMode() {
 let questionSet= qAEasySet;
 let questionGen = Math.floor(Math.random() * questionSet.length);
 let corectAns = questionSet[questionGen]["corectAnswer"];
+let easy = "easy"
 loadQuestion(questionSet, corectAns, questionGen);
+userAnswer(corectAns, easy);
+qAEasySet.splice(questionGen,1);
+
 };
 
