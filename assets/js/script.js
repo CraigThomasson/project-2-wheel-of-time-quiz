@@ -29,8 +29,13 @@ let qAEasySet =
     },
     {
     question: "Rand learns to play which instrument?",
-    answers: ["Harp", "Flute", "fiddle", "Triangle"],
+    answers: ["Harp", "Flute", "Fiddle", "Triangle"],
     corectAnswer: "Flute"
+    },
+    {
+    question: "What does Perin bring with him from master Luhhan’s smithy when leaving Emond’s Field?",
+    answers: ["War pick", "Heron marked blade", "Blacksmiths hammer", "Half moon axe"],
+    corectAnswer: "Half moon axe"
     }
 ];
 
@@ -70,16 +75,15 @@ function clearSelected() {
 function checkAnswer(i, t) {
     
     let selctedAnswer = document.getElementsByClassName("selected");
-    console.log(selctedAnswer)
     let text = selctedAnswer[0].getAttribute("value");
-    console.log("i:", i, " text:", text);
-    console.log(qAEasySet);
     if (text === i) {
         correctBox(t);
-        correctScore();      
+        correctScore();
+        questionCounter()     
     } else {
         incorrectBox(t);
         incorrectScore();
+        questionCounter();
     }
     
 };
@@ -96,6 +100,7 @@ function correctBox (t) {
     next.addEventListener("click", () => {
         answerBox.style.display = "block";
         correctAnswerBox.style.display = "none";
+        endQuiz()
         runGame(t);
     })
 };
@@ -112,6 +117,7 @@ function incorrectBox (t) {
     next.addEventListener("click", () => {
         answerBox.style.display = "block";
         incorrectAnswerBox.style.display = "none";
+        endQuiz()
         runGame(t);
     })
 };
@@ -163,6 +169,37 @@ function incorrectScore() {
     document.getElementById("incorrect-score").innerText = ++score;
 };
 
+function questionCounter () {
+    let count = parseInt(document.getElementById("question-counter").innerText);
+    document.getElementById("question-counter").innerText = ++count;
+};
+
+/**
+ * brings up the end card when the desiered amount of questions have been answerd.
+ */
+function endQuiz() {
+    let count =  parseInt(document.getElementById("question-counter").innerText);
+    let correctAnswerBox = document.getElementById("correct");
+    let answerBox = document.getElementById("answer-card");
+    let incorrectAnswerBox = document.getElementById("incorrect");
+    let endBox = document.getElementById("end-box")
+    resetQuiz()
+    document.getElementById("total").innerText = count;
+    if (count == 3) {
+        endBox.style.display = "block";
+        correctAnswerBox.style.display = "none";
+        answerBox.style.display = "none";
+        incorrectAnswerBox.style.display = "none";
+    }
+};
+
+function resetQuiz() {
+    let reset = document.getElementById("restart")
+    reset.addEventListener("click", () => {
+        location.reload();
+    })
+};
+
 /**
  * generates  random easy questions and answers
  */
@@ -174,6 +211,5 @@ let easy = "easy";
 loadQuestion(questionSet, corectAns, questionGen);
 userAnswer(corectAns, easy);
 qAEasySet.splice(questionGen,1);
-
 };
 
