@@ -75,9 +75,11 @@ function checkAnswer(i, t) {
     console.log("i:", i, " text:", text);
     console.log(qAEasySet);
     if (text === i) {
-        correctBox(t)           
+        correctBox(t);
+        correctScore();      
     } else {
         incorrectBox(t);
+        incorrectScore();
     }
     
 };
@@ -144,13 +146,31 @@ function runGame(gameDif) {
 };
 
 /**
+ * code taken from code institiue love maths project.
+ * gets current score from DOM and increments by 1
+ */
+function correctScore() {
+    let score = parseInt(document.getElementById("correct-score").innerText);
+    document.getElementById("correct-score").innerText = ++score;
+};
+
+/**
+ * code taken from code institiue love maths project.
+ * gets current incorect score from DOM and increments by 1
+ */
+function incorrectScore() {
+    let score = parseInt(document.getElementById("incorrect-score").innerText);
+    document.getElementById("incorrect-score").innerText = ++score;
+};
+
+/**
  * generates  random easy questions and answers
  */
 function easyMode() {
 let questionSet= qAEasySet;
 let questionGen = Math.floor(Math.random() * questionSet.length);
 let corectAns = questionSet[questionGen]["corectAnswer"];
-let easy = "easy"
+let easy = "easy";
 loadQuestion(questionSet, corectAns, questionGen);
 userAnswer(corectAns, easy);
 qAEasySet.splice(questionGen,1);
