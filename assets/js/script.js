@@ -36,6 +36,11 @@ let qAEasySet =
     question: "What does Perin bring with him from master Luhhan’s smithy when leaving Emond’s Field?",
     answers: ["War pick", "Heron marked blade", "Blacksmiths hammer", "Half moon axe"],
     corectAnswer: "Half moon axe"
+    },
+    {
+    question: "Which of these colours does not belong to and Ajar of the White Tower?",
+    answers: ["green", "Purple", "Blue", "Red"],
+    corectAnswer: "Purple"
     }
 ];
 
