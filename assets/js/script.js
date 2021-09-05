@@ -193,7 +193,6 @@ function runGame(gameDif) {
         <input type=button id="btn2" class="answer-btn" value="${questions[questionRandom]["answers"][2]}">
         <input type=button id="btn3" class="answer-btn" value="${questions[questionRandom]["answers"][3]}">`;
     userAnswer(corectAns, mode);
-    easyQuestions.splice(questionRandom,1);
     console.log("loadquestion", questionSet);
 };
 
@@ -231,7 +230,7 @@ function endQuiz() {
     let endBox = document.getElementById("end-box")
     resetQuiz()
     document.getElementById("total").innerText = count;
-    if (count == 5) {
+    if (count == 3) {
         endBox.style.display = "block";
         correctAnswerBox.style.display = "none";
         answerBox.style.display = "none";
@@ -253,6 +252,7 @@ function resetQuiz() {
  * generates  random easy questions and answers
  */
 function easyMode() {
+    easyQuestions.splice(questionGen,1)
     let mode = "easy"
     chooseQuestionList("easymode")
     chooseAnswerList("easymode")
