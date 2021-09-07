@@ -48,40 +48,29 @@ let easyQuestions = [
     }
 ];
 
+shuffle(easyQuestions)
+
 let questionSet = [];
-let questionGen = "";
 function chooseQuestionList(modeSelect) {
     if (modeSelect === "easymode") {
         questionSet = easyQuestions;
-        console.log("question set", questionSet);
     };
 }
 
-let answerSet = [];
-function chooseAnswerList(modeSelect) {
-    if (modeSelect === "easymode") {
-        answerSet = [
-            {
-            corectAnswer: "Warder"
-            },
-            {
-            corectAnswer: "Ruby-hilted dagger"
-            },
-            {
-            corectAnswer: "Flute"
-            },
-            {
-            corectAnswer: "Half moon axe"
-            },
-            {
-            corectAnswer: "Purple"
-            },
-            {
-            corectAnswer: "Wolf"
-            }
-        ];
+
+/**
+ * fisher-yeates shuffle
+ * this will randomly shuffle question and answer array
+ */
+function shuffle(array) {
+    // Loop from the last element to the second element
+    for(let i = array.length - 1; i > 0; i--) {
+    // Generate random index from remaining unshuffled elements
+    const j = Math.floor(Math.random() * (i + 1));
+    // Swap elements
+    [array[i], array[j]] = [array[j], array[i]];
     }
-}
+    };
 
 /**
  * this adds the selected class to a anserbutton when clicked by the user.
@@ -184,16 +173,20 @@ function runGame(gameDif) {
 /**
  * gets a random question from selected question set
  */
- function loadQuestion(questions, questionRandom, corectAns, mode) {
+ function loadQuestion(questionSet, mode) {
     let answers = document.getElementById("answer-container");
-    document.getElementById("question").innerHTML = questions[questionRandom]["question"];
+    let i = parseInt(document.getElementById("question-counter").innerText);
+    console.log(i);
+    console.log(questionSet)
+    let correctAns = questionSet[i]["corectAnswer"];
+    console.log(correctAns);
+    document.getElementById("question").innerHTML = questionSet[i]["question"];
     answers.innerHTML = 
-        `<input type=button id="btn0" class="answer-btn" value="${questions[questionRandom]["answers"][0]}">
-        <input type=button id="btn1" class="answer-btn" value="${questions[questionRandom]["answers"][1]}">
-        <input type=button id="btn2" class="answer-btn" value="${questions[questionRandom]["answers"][2]}">
-        <input type=button id="btn3" class="answer-btn" value="${questions[questionRandom]["answers"][3]}">`;
-    userAnswer(corectAns, mode);
-    console.log("loadquestion", questionSet);
+        `<input type=button id="btn0" class="answer-btn" value="${questionSet[i]["answers"][0]}">
+        <input type=button id="btn1" class="answer-btn" value="${questionSet[i]["answers"][1]}">
+        <input type=button id="btn2" class="answer-btn" value="${questionSet[i]["answers"][2]}">
+        <input type=button id="btn3" class="answer-btn" value="${questionSet[i]["answers"][3]}">`;
+    userAnswer(correctAns, mode);
 };
 
 /**
@@ -230,7 +223,7 @@ function endQuiz() {
     let endBox = document.getElementById("end-box")
     resetQuiz()
     document.getElementById("total").innerText = count;
-    if (count == 3) {
+    if (count == 5) {
         endBox.style.display = "block";
         correctAnswerBox.style.display = "none";
         answerBox.style.display = "none";
@@ -252,13 +245,9 @@ function resetQuiz() {
  * generates  random easy questions and answers
  */
 function easyMode() {
-    easyQuestions.splice(questionGen,1)
     let mode = "easy"
     chooseQuestionList("easymode")
-    chooseAnswerList("easymode")
-    questionGen = Math.floor(Math.random() * questionSet.length);
-    let corectAns = questionSet[questionGen]["corectAnswer"];
-    loadQuestion(questionSet, questionGen, corectAns, mode);
-    console.log("leasymoad", questionSet);
+    questionSet
+    loadQuestion(questionSet, mode,);
 };
 
