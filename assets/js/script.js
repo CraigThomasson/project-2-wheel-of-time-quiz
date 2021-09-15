@@ -48,15 +48,57 @@ let easyQuestions = [
     }
 ];
 
-shuffle(easyQuestions)
+let mediumQuestions = [
+    {
+    question: "What is the name of the army that follows Matrim cauthon?",
+    answers:["The band of the red hammer", "The band of the red heron", "The band of the red hand", "The band of the red wheel"],
+    corectAnswer: "The band of the red hand"
+    },
+    {
+    question:"How many sisters does mat have?",
+    answers: ["One", "Two", "Three", "four"],
+    corectAnswer: "Two"
+    },
+    {
+    question: "meduim question",
+    answers: ["Harp", "Flute", "Fiddle", "Triangle"],
+    corectAnswer: "Flute"
+    },
+    {
+    question: "meduim question",
+    answers: ["War pick", "Heron marked blade", "Blacksmiths hammer", "Half moon axe"],
+    corectAnswer: "Half moon axe"
+    },
+    {
+    question: "medium question",
+    answers: ["green", "Purple", "Blue", "Red"],
+    corectAnswer: "Purple"
+    },
+    {
+    question: "medium question ",
+    answers: ["Tiger", "Rabbit", "Frog", "Wolf"],
+    corectAnswer: "Wolf"
+    }
+];
 
+shuffle(easyQuestions)
+shuffle(mediumQuestions)
+
+/**
+ * pics the correct question set for the selected game mode
+ */
 let questionSet = [];
 function chooseQuestionList(modeSelect) {
-    if (modeSelect === "easymode") {
+    if (modeSelect === "easyMode") {
         questionSet = easyQuestions;
+    }
+    if (modeSelect ==="mediumMode") {
+        questionSet = mediumQuestions;
+    }
+    if (modeSelect ==="hardmMode") {
+        questionSet = hardQuestions;
     };
-}
-
+};
 
 /**
  * fisher-yeates shuffle
@@ -206,7 +248,9 @@ function incorrectScore() {
     let score = parseInt(document.getElementById("incorrect-score").innerText);
     document.getElementById("incorrect-score").innerText = ++score;
 };
-
+/**
+ * updates the question counter
+ */
 function questionCounter () {
     let count = parseInt(document.getElementById("question-counter").innerText);
     document.getElementById("question-counter").innerText = ++count;
@@ -246,7 +290,27 @@ function resetQuiz() {
  */
 function easyMode() {
     let mode = "easy"
-    chooseQuestionList("easymode")
+    chooseQuestionList("easyMode")
+    questionSet
+    loadQuestion(questionSet, mode,);
+};
+
+/**
+ * generates  random medium questions and answers
+ */
+function mediumMode() {
+    let mode = "medium"
+    chooseQuestionList("mediumMode")
+    questionSet
+    loadQuestion(questionSet, mode,);
+};
+
+/**
+ * generates  random hard questions and answers
+ */
+function hardMode() {
+    let mode = "hard"
+    chooseQuestionList("hardMode")
     questionSet
     loadQuestion(questionSet, mode,);
 };
