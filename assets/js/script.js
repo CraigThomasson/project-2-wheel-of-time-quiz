@@ -55,7 +55,7 @@ let mediumQuestions = [
     corectAnswer: "The band of the red hand"
     },
     {
-    question:"How many sisters does mat have?",
+    question:"How many sisters does Matt have?",
     answers: ["One", "Two", "Three", "four"],
     corectAnswer: "Two"
     },
