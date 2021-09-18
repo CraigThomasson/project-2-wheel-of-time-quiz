@@ -224,11 +224,11 @@ function runGame(gameDif) {
     console.log(correctAns);
     document.getElementById("question").innerHTML = questionSet[i]["question"];
     answers.innerHTML = 
-        `<div class="row justify-content-md-center">
+        `<div class="row justify-content-center">
         <input type=button id="btn0" class="col-10 col-sm-4 answer-btn" value="${questionSet[i]["answers"][0]}">
         <input type=button id="btn1" class="col-10 col-sm-4 answer-btn" value="${questionSet[i]["answers"][1]}">
         </div>
-        <div class="row justify-content-md-center">
+        <div class="row justify-content-center">
         <input type=button id="btn2" class="col-10 col-sm-4 answer-btn" value="${questionSet[i]["answers"][2]}">
         <input type=button id="btn3" class="col-10 col-sm-4 answer-btn" value="${questionSet[i]["answers"][3]}">
         </div>`;
