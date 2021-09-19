@@ -19,32 +19,38 @@ let easyQuestions = [
     {
     question: "What name is given to someone bonded to an Aes Sedai?",
     answers:["Warder", "Asha'man", "Guardian", "Grey man"],
-    corectAnswer: "Warder"
+    corectAnswer: "Warder",
+    img: "assets/media/images/swordsman.jpg"
     },
     {
     question:"What item does Matt take from Shadar Logoth?",
     answers: ["Gold coin", "Silver dice set", "Ruby-hilted dagger", "Crystal sward "],
-    corectAnswer: "Ruby-hilted dagger"
+    corectAnswer: "Ruby-hilted dagger",
+    img: "assets/media/images/swordsman.jpg"
     },
     {
     question: "Rand learns to play which instrument?",
     answers: ["Harp", "Flute", "Fiddle", "Triangle"],
-    corectAnswer: "Flute"
+    corectAnswer: "Flute",
+    img: "assets/media/images/swordsman.jpg"
     },
     {
     question: "What does Perin bring with him from master Luhhan’s smithy when leaving Emond’s Field?",
     answers: ["War pick", "Heron marked blade", "Blacksmiths hammer", "Half moon axe"],
-    corectAnswer: "Half moon axe"
+    corectAnswer: "Half moon axe",
+    img: "assets/media/images/swordsman.jpg"
     },
     {
     question: "Which of these colours does not belong to and Ajar of the White Tower?",
     answers: ["green", "Purple", "Blue", "Red"],
-    corectAnswer: "Purple"
+    corectAnswer: "Purple",
+    img: "assets/media/images/swordsman.jpg"
     },
     {
     question: "Hopper is a…? ",
     answers: ["Tiger", "Rabbit", "Frog", "Wolf"],
-    corectAnswer: "Wolf"
+    corectAnswer: "Wolf",
+    img: "assets/media/images/swordsman.jpg"
     }
 ];
 
@@ -222,9 +228,8 @@ function runGame(gameDif) {
     console.log(questionSet)
     let correctAns = questionSet[i]["corectAnswer"];
     console.log(correctAns);
-    document.getElementById("answer-card").style.cssText = `
-    background: url("assets/media/images/swordsman.jpg") no-repeat center center local;
-    background-size: cover;`
+    let img = questionSet[i]["img"]
+    document.getElementById("answer-card").style.backgroundImage = `url(${img})`
     document.getElementById("question").innerHTML = questionSet[i]["question"];
     
     answers.innerHTML = 

@@ -39,3 +39,11 @@ button {
     background-color: rgba(103,4,4,.7);
     white-space: normal;
 }
+
+#answer-card {
+    background-image: url();
+    background-attachment: local;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
