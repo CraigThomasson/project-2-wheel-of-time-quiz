@@ -144,7 +144,7 @@ function clearSelected() {
 };
 
 /**
- * checks is selected answer is correct on click of submit button
+ * checks if selected answer is correct on click of submit button
  * and responds with correct or incorrect answer box.
  */
 function checkAnswer(corectAns, mode) {
@@ -269,8 +269,9 @@ function endQuiz() {
     let answerBox = document.getElementById("answer-card");
     let incorrectAnswerBox = document.getElementById("incorrect");
     let endBox = document.getElementById("end-box")
+    let total = parseInt(document.getElementById("correct-score").innerText)
     resetQuiz()
-    document.getElementById("total").innerText = count;
+    document.getElementById("total").innerText = total;
     if (count == 5) {
         endBox.style.display = "block";
         correctAnswerBox.style.display = "none";
