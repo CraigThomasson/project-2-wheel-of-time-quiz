@@ -223,7 +223,7 @@ function runGame(gameDif) {
     let correctAns = questionSet[i]["corectAnswer"];
     console.log(correctAns);
     document.getElementById("answer-card").style.cssText = `
-    background: url("assets/media/images/swordsman.jpg") no-repeat center center fixed;
+    background: url("assets/media/images/swordsman.jpg") no-repeat center center local;
     background-size: cover;`
     document.getElementById("question").innerHTML = questionSet[i]["question"];
     
