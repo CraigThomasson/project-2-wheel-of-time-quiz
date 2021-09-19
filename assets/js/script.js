@@ -229,7 +229,7 @@ function runGame(gameDif) {
     
     answers.innerHTML = 
         `<div class="row justify-content-center">
-        <input type=button id="btn0" class="col-10 col-sm-4 answer-btn" value="${questionSet[i]["answers"][0]}">
+        <input type=button id="btn0" class="col-10 col-sm-4 answer-btn span-2" value="${questionSet[i]["answers"][0]}">
         <input type=button id="btn1" class="col-10 col-sm-4 answer-btn" value="${questionSet[i]["answers"][1]}">
         </div>
         <div class="row justify-content-center">

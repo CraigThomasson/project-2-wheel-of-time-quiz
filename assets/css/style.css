@@ -14,6 +14,7 @@ body {
     border: 3px solid black;
     padding: 60px;
 }
+
 button {
     background-color: 	#670404;
     font-weight: 600;
@@ -36,4 +37,5 @@ button {
     width: 20vw;
     margin-top: 5px;
     background-color: rgba(103,4,4,.7);
+    white-space: normal;
 }
