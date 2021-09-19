@@ -12,10 +12,11 @@ body {
 
 .answers {
     border: 3px solid black;
-    padding-bottom: 10px;
+    padding: 60px;
 }
 button {
     background-color: 	#670404;
+    font-weight: 600;
 }
 
 .questions-card {
@@ -30,7 +31,9 @@ button {
 }
 
 .answer-btn {
+    font-weight: 600;
     height: 10vh;
     width: 20vw;
     margin-top: 5px;
+    background-color: rgba(103,4,4,.7);
 }
