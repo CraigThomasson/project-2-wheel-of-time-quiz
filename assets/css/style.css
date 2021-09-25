@@ -39,6 +39,7 @@ button {
     margin-top: 5px;
     background-color: rgba(219,166,34,.7);
     white-space: normal;
+    padding: 1px;
 }
 
 #answer-card {
