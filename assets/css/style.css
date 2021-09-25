@@ -2,7 +2,7 @@ body {
     font-family: sans-serif, serif;
     margin: 0px;
     padding: 0px;
-    background-image: url(/assets/media/images/smoke-on-black.jpg);
+    background-image: url(../media/images/smoke-on-black.jpg);
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
@@ -47,7 +47,7 @@ button {
 
 #answer-card {
     min-height: 350px;
-    background-image: url(/assets/media/images/The-Wheel-of-Time-2.jpg);
+    background-image: url(../media/images/The-Wheel-of-Time-2.jpg);
     background-attachment: local;
     background-repeat: no-repeat;
     background-position: center center;
