@@ -3,6 +3,9 @@ body {
     margin: 0px;
     padding: 0px;
     background-image: url(/assets/media/images/smoke-on-black.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
     color: #dba622;
 }
 
