@@ -19,20 +19,20 @@ body {
 }
 
 button {
-    background-color: rgba(219,166,34,.7);
+    background-color: rgba(219, 166, 34, 0.7);
     font-weight: 600;
 }
 
 .questions-card {
-    border: ;
+    background-color: rgba(0, 0, 0, 0.7);
     box-shadow: 0 -3px 12px rgba(0, 0, 0, 1);
 }
 
 .card { 
-    border: 3px solid #dba622;
     min-height: 30vh;
     display: none;
-    background-color: #0b0b0b
+    background-color: rgba(0, 0, 0, 0.7);
+    box-shadow: 0 -3px 12px rgba(0, 0, 0, 1);
 }
 
 .answer-btn {
@@ -40,7 +40,7 @@ button {
     height: 10vh;
     width: 20vw;
     margin-top: 5px;
-    background-color: rgba(219,166,34,.7);
+    background-color: rgba(219, 166, 34, 0.7);
     white-space: normal;
     padding: 1px;
 }
