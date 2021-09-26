@@ -135,6 +135,8 @@ function incorrectBox (mode) {
  * runs the dificulty level the user selects.
  */
 function runGame(gameDif) {
+let difButtons = document.getElementById("dif-container")
+difButtons.style.display = "none";   
     if (gameDif === "easy") {
         easyMode();
     } else if (gameDif === "medium") {
