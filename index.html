@@ -10,9 +10,13 @@
     <title>The Wheel of Time Quize</title>
 </head>
 <body>
-    <header>
-        <h1 class="center-text">The Wheel of Time quiz</h1>
-    </header>
+    <div class="container">
+        <div class="row justify-content justify-content-center">
+            <header class="col-12 box-shadow rounded">
+                <h1 class="center-text">The Wheel of Time Quiz</h1>
+            </header>
+        </div>
+    </div>
     <div class="container">
         <div id="dif-container" class="row justify-content-md-center">
             <div class="col-12 difaculty center-text">
@@ -31,11 +35,11 @@
             <p class="col-4 col-sm-4 scores"><i class="fas fa-times-circle"></i>:<span id="incorrect-score">0</span></p>
         </div>
         <section id="game-board">
-            <div class="questions-card center-text box-shadow">
+            <div class="questions-card center-text box-shadow rounded">
                 <h3>Question:</h3>
                 <p id="question">Click dificulty to test your Wheel of Time knowlege</p>
             </div>
-            <div id="answer-card" class="answers center-text box-shadow">
+            <div id="answer-card" class="answers center-text box-shadow rounded">
                 <div id="answer-container"></div>
             </div>
             <div id="correct" class="card center-text box-shadow">

@@ -15,6 +15,7 @@ body {
 
 header {
     margin-top: 15px;
+    background-color: rgba(43, 43, 42, 0.6);
 }
 
 .center-text {
@@ -25,8 +26,9 @@ header {
     padding: 60px;
 }
 
-.dif-container {
-    display: block;
+#dif-container {
+    margin-top: 20px;
+    margin-bottom: 10px;
 }
 
 button {
