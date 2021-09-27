@@ -9,13 +9,16 @@ body {
     color: #dba622;
 }
 
+.box-shadow {
+    box-shadow: 0 -3px 12px rgb(54, 52, 34);
+}
+
 .center-text {
     text-align: center;
 }
 
 .answers {
     padding: 60px;
-    box-shadow: 0 -3px 12px rgba(0, 0, 0, 1);
 }
 
 .dif-container {
@@ -29,14 +32,12 @@ button {
 
 .questions-card {
     background-color: rgba(43, 43, 42, 0.04);
-    box-shadow: 0 -3px 12px rgba(0, 0, 0, 1);
 }
 
 .card { 
     min-height: 30vh;
     display: none;
     background-color: rgba(43, 43, 42, 0.04);
-    box-shadow: 0 -3px 12px rgba(0, 0, 0, 1);
 }
 
 .answer-btn {
