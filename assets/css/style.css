@@ -13,6 +13,10 @@ body {
     box-shadow: 0 -3px 12px rgb(54, 52, 34);
 }
 
+header {
+    margin-top: 15px;
+}
+
 .center-text {
     text-align: center;
 }
@@ -31,7 +35,7 @@ button {
 }
 
 .questions-card {
-    background-color: rgba(43, 43, 42, 0.04);
+    background-color: rgba(43, 43, 42, 0.6);
 }
 
 .card { 
