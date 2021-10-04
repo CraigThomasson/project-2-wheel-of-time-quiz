@@ -84,27 +84,27 @@ let mediumQuestions = [
 
 let hardQuestions = [
     {
-    question: "What name is given to someone bonded to an Aes Sedai?",
-    answers:["Warder", "Asha'man", "Guardian", "Grey man"],
-    corectAnswer: "Warder",
+    question: "When was Siuan Sanche  raised to the Amyrlin Seat?",
+    answers:["988 NE", "999 NE", "977 NE", "966 NE"],
+    corectAnswer: "988 NE",
     img: "assets/media/images/swordsman.jpg"
     },
     {
-    question:"What item does Matt take from Shadar Logoth?",
-    answers: ["Gold coin", "Silver dice set", "Ruby-hilted dagger", "Crystal sward "],
-    corectAnswer: "Ruby-hilted dagger",
+    question:"Fortuna’s full name is Fortuona Athaem Devi…?",
+    answers: ["Hawkwing", "Farshaw", "Paendrag", "Tamarath"],
+    corectAnswer: "Paendrag",
     img: "assets/media/images/swordsman.jpg"
     },
     {
-    question: "Rand learns to play which instrument?",
-    answers: ["Harp", "Flute", "Fiddle", "Triangle"],
-    corectAnswer: "Flute",
+    question: "What was the name of the university in the city of V'saine, in the Age of Legends?",
+    answers: ["Collam Daan", "The Sharom", "Paaran Disen", "Mar Ruois"],
+    corectAnswer: "Collam Daan",
     img: "assets/media/images/swordsman.jpg"
     },
     {
-    question: "What does Perin bring with him from master Luhhan’s smithy when leaving Emond’s Field?",
-    answers: ["War pick", "Heron marked blade", "Blacksmiths hammer", "Half moon axe"],
-    corectAnswer: "Half moon axe",
+    question: "A Warder’s cloak is made from which material??",
+    answers: ["Fabrial Fibers", "Organic Organza", "Shimmer Silk", "Fancloth"],
+    corectAnswer: "Fancloth",
     img: "assets/media/images/swordsman.jpg"
     },
     {
