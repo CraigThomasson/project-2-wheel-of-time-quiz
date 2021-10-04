@@ -16,8 +16,8 @@ document.addEventListener("DOMContentLoaded", function() {
 );
 
 // will shuffel the questions before being called latter in the code 
-shuffle(easyQuestions)
-shuffle(mediumQuestions)
+shuffle(easyQuestions);
+shuffle(mediumQuestions);
 
 /**
  * pics the correct question set for the selected game mode
@@ -32,7 +32,7 @@ function chooseQuestionList(modeSelect) {
     }
     if (modeSelect ==="hardMode") {
         questionSet = hardQuestions;
-    };
+    }
 };
 
 /**
@@ -47,36 +47,36 @@ function shuffle(array) {
     // Swap elements
     [array[i], array[j]] = [array[j], array[i]];
     }
-    };
+    }
 
 /**
  * this adds the selected class to a anserbutton when clicked by the user.
  * it also calls the clearselected function to remove the selected class from other buttons.
  */
 function userAnswer(corectAns, mode) {
-    let answers = document.getElementsByClassName("answer-btn")
+    let answers = document.getElementsByClassName("answer-btn");
     for (let answer of answers) {
         answer.addEventListener("click", () => {
             clearSelected();
             answer.classList.add("selected");
             checkAnswer(corectAns, mode);
-        })
-    };
-};
+        });
+    }
+}
 
 /**
  * clears the selcted class from buttons if a sibling button is clicked.
  */
 function clearSelected() {
-    let answers = document.getElementsByClassName("answer-btn")
+    let answers = document.getElementsByClassName("answer-btn");
     for (let answer of answers) {
         let sibs = answer.parentElement.children;
             for (let sib of sibs) {
                 if (sib.classList === "answer-btn selected");
                 sib.classList.remove("selected");
-            };
-    };
-};
+            }
+    }
+}
 
 /**
  * checks if selected answer is correct on click of submit button
@@ -95,7 +95,7 @@ function checkAnswer(corectAns, mode) {
         incorrectScore();
         questionCounter();
     }
-};
+}
 
 /**
  * hides question box and shows correct answer box and text when called.
@@ -109,10 +109,10 @@ function correctBox (mode) {
     next.addEventListener("click", () => {
         answerBox.style.display = "block";
         correctAnswerBox.style.display = "none";
-        endQuiz()
+        endQuiz();
         runGame(mode);
-    })
-};
+    });
+}
 
 /**
  * hides question box and shows incorrect answer box and text when called.
@@ -126,16 +126,16 @@ function incorrectBox (mode) {
     next.addEventListener("click", () => {
         answerBox.style.display = "block";
         incorrectAnswerBox.style.display = "none";
-        endQuiz()
+        endQuiz();
         runGame(mode);
-    })
-};
+    });
+}
 
 /**
  * runs the dificulty level the user selects.
  */
 function runGame(gameDif) {
-let difButtons = document.getElementById("dif-container")
+let difButtons = document.getElementById("dif-container");
 difButtons.style.display = "none";   
     if (gameDif === "easy") {
         easyMode();
@@ -144,23 +144,23 @@ difButtons.style.display = "none";
     } else if (gameDif === "hard") {
         hardMode();
     } else {
-        alert(`unknow difaculty: ${gameDif}`)
-        throw `unkown game difaculty; ${gameDif}. aborting!`
+        alert(`unknow difaculty: ${gameDif}`);
+        throw `unkown game difaculty; ${gameDif}. aborting!`;
     }
-};
+}
 
 /**
  * gets a random question from selected question set
  */
- function loadQuestion(questionSet, mode) {
+ function loadQuestion(mode) {
     let answers = document.getElementById("answer-container");
     let i = parseInt(document.getElementById("question-counter").innerText);
     console.log(i);
-    console.log(questionSet)
+    console.log(questionSet);
     let correctAns = questionSet[i]["corectAnswer"];
     console.log(correctAns);
-    let img = questionSet[i]["img"]
-    document.getElementById("answer-card").style.backgroundImage = `url(${img})`
+    let img = questionSet[i]["img"];
+    document.getElementById("answer-card").style.backgroundImage = `url(${img})`;
     document.getElementById("question").innerHTML = questionSet[i]["question"];
     
     answers.innerHTML = 
@@ -173,7 +173,7 @@ difButtons.style.display = "none";
         <input type=button id="btn3" class="col-10 col-sm-4 answer-btn" value="${questionSet[i]["answers"][3]}">
         </div>`;
     userAnswer(correctAns, mode);
-};
+}
 
 /**
  * code taken from code institiue love maths project.
@@ -182,7 +182,7 @@ difButtons.style.display = "none";
 function correctScore() {
     let score = parseInt(document.getElementById("correct-score").innerText);
     document.getElementById("correct-score").innerText = ++score;
-};
+}
 
 /**
  * code taken from code institiue love maths project.
@@ -191,14 +191,14 @@ function correctScore() {
 function incorrectScore() {
     let score = parseInt(document.getElementById("incorrect-score").innerText);
     document.getElementById("incorrect-score").innerText = ++score;
-};
+}
 /**
  * updates the question counter
  */
 function questionCounter () {
     let count = parseInt(document.getElementById("question-counter").innerText);
     document.getElementById("question-counter").innerText = ++count;
-};
+}
 
 /**
  * brings up the end card when the desiered amount of questions have been answerd.
@@ -208,9 +208,9 @@ function endQuiz() {
     let correctAnswerBox = document.getElementById("correct");
     let answerBox = document.getElementById("answer-card");
     let incorrectAnswerBox = document.getElementById("incorrect");
-    let endBox = document.getElementById("end-box")
+    let endBox = document.getElementById("end-box");
     let total = parseInt(document.getElementById("correct-score").innerText)
-    resetQuiz()
+    resetQuiz();
     document.getElementById("total").innerText = total;
     if (count == 5) {
         endBox.style.display = "block";
@@ -218,45 +218,42 @@ function endQuiz() {
         answerBox.style.display = "none";
         incorrectAnswerBox.style.display = "none";
     }
-};
+}
 
 /**
  * this reloads the page when called
  */
 function resetQuiz() {
-    let reset = document.getElementById("restart")
+    let reset = document.getElementById("restart");
     reset.addEventListener("click", () => {
         location.reload();
     })
-};
+}
 
 /**
  * generates  random easy questions and answers
  */
 function easyMode() {
-    let mode = "easy"
-    chooseQuestionList("easyMode")
-    questionSet
-    loadQuestion(questionSet, mode,);
-};
+    let mode = "easy";
+    chooseQuestionList("easyMode");
+    loadQuestion(mode);
+}
 
 /**
  * generates  random medium questions and answers
  */
 function mediumMode() {
-    let mode = "medium"
-    chooseQuestionList("mediumMode")
-    questionSet
-    loadQuestion(questionSet, mode,);
-};
+    let mode = "medium";
+    chooseQuestionList("mediumMode");
+    loadQuestion(mode);
+}
 
 /**
  * generates  random hard questions and answers
  */
 function hardMode() {
-    let mode = "hard"
-    chooseQuestionList("hardMode")
-    questionSet
-    loadQuestion(questionSet, mode,);
-};
+    let mode = "hard";
+    chooseQuestionList("hardMode");
+    loadQuestion(mode);
+}
 
