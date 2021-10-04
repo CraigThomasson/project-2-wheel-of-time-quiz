@@ -30,7 +30,7 @@ function chooseQuestionList(modeSelect) {
     if (modeSelect ==="mediumMode") {
         questionSet = mediumQuestions;
     }
-    if (modeSelect ==="hardmMode") {
+    if (modeSelect ==="hardMode") {
         questionSet = hardQuestions;
     };
 };

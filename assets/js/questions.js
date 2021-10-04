@@ -108,21 +108,21 @@ let hardQuestions = [
     img: "assets/media/images/swordsman.jpg"
     },
     {
-    question: "Which of these colours does not belong to and Ajar of the White Tower?",
-    answers: ["green", "Purple", "Blue", "Red"],
-    corectAnswer: "Purple",
+    question: "What is the name of the Sea Folk prophecies that predict the coming of the Coramoor?",
+    answers: ["Karaethon prophecies", "Essanik prophecies", "Jendai prophecies", "shadow prophecies"],
+    corectAnswer: "Jendai prophecies",
     img: "assets/media/images/swordsman.jpg"
     },
     {
-    question: "Hopper is a…? ",
-    answers: ["Tiger", "Rabbit", "Frog", "Wolf"],
-    corectAnswer: "Wolf",
+    question: "Rands farther by blood is?",
+    answers: ["Tam", "Janduin", "Rhuarc", "Mandelain"],
+    corectAnswer: "Janduin",
     img: "assets/media/images/swordsman.jpg"
     },
     {
-    question: "What condition effects Ogier’s when they are away from steadings?",
-    answers: ["The Needing", "The Wanting", "The Yearning", "The Longing"],
-    corectAnswer: "The Longing",
+    question: "Who was Thom’s nephew?",
+    answers: ["Alric", "Owyn", "Eamon", "Earwin"],
+    corectAnswer: "Owyn",
     img: "assets/media/images/swordsman.jpg"
     }
 
