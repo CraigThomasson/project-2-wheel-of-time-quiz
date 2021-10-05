@@ -57,7 +57,6 @@ function userAnswer(corectAns, mode) {
     let answers = document.getElementsByClassName("answer-btn");
     for (let answer of answers) {
         answer.addEventListener("click", () => {
-            clearSelected();
             answer.classList.add("selected");
             checkAnswer(corectAns, mode);
         });
@@ -65,25 +64,10 @@ function userAnswer(corectAns, mode) {
 }
 
 /**
- * clears the selcted class from buttons if a sibling button is clicked.
- */
-function clearSelected() {
-    let answers = document.getElementsByClassName("answer-btn");
-    for (let answer of answers) {
-        let sibs = answer.parentElement.children;
-            for (let sib of sibs) {
-                if (sib.classList === "answer-btn selected");
-                sib.classList.remove("selected");
-            }
-    }
-}
-
-/**
- * checks if selected answer is correct on click of submit button
+ * checks if selected answer is correct on click of answer button
  * and responds with correct or incorrect answer box.
  */
 function checkAnswer(corectAns, mode) {
-    
     let selctedAnswer = document.getElementsByClassName("selected");
     let text = selctedAnswer[0].getAttribute("value");
     if (text === corectAns) {
@@ -155,7 +139,9 @@ difButtons.style.display = "none";
 }
 
 /**
- * gets a random question from selected question set
+ * loads questions and answers from chosen question set.
+ * gets questions and answers from the shuffeld question set.
+ * runs user anser function to check questions
  */
  function loadQuestion(mode) {
     let answers = document.getElementById("answer-container");
