@@ -29,29 +29,36 @@
                 </div>
             </div>
         </div>
+        <!-- displays a score board for the quiz -->
         <div class="row score-card center-text">
             <p class="col-4 col-sm-4 scores">Q:<span id="question-counter">0</span></p>
             <p class="col-4 col-sm-4 scores"><i class="fas fa-check-circle"></i>:<span id="correct-score">0</span></p>
             <p class="col-4 col-sm-4 scores"><i class="fas fa-times-circle"></i>:<span id="incorrect-score">0</span></p>
         </div>
+        <!-- displays quiz in this section -->
         <section id="game-board">
+            <!-- displayes question when quize begins -->
             <div class="questions-card center-text box-shadow rounded">
                 <h3>Question:</h3>
                 <p id="question">Click dificulty to test your Wheel of Time knowlege</p>
             </div>
+            <!-- displys answer buttons when quiz starts -->
             <div id="answer-card" class="answers center-text box-shadow rounded">
                 <div id="answer-container"></div>
             </div>
+            <!-- displays if correct answer is picked -->
             <div id="correct" class="card center-text box-shadow">
                 <h2>correct answer!</h2>
                 <p id="correct-text"></p>
                 <BUtton id="next-btn">Next</BUtton>
             </div>
+            <!-- displayes if incorrect answer is picked -->
             <div id="incorrect" class="card center-text box-shadow">
                 <h2>wrong answer!</h2>
                 <p id="incorrect-text"></p>
                 <BUtton id="incorrect-next-btn">Next</BUtton>
             </div>
+            <!-- displayes when the quiz ends -->
             <div id="end-box" class="card center-text box-shadow">
                 <h3>The wheel weaves as the wheel wills, and although this is not the end, it is an ending.</h3>
                 <p>You scored: <span id="total"></span></p>
