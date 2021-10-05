@@ -53,12 +53,12 @@ function shuffle(array) {
  * this adds the selected class to a anserbutton when clicked by the user.
  * it also calls the clearselected function to remove the selected class from other buttons.
  */
-function userAnswer(corectAns, mode) {
+function userAnswer(correctAns, mode) {
     let answers = document.getElementsByClassName("answer-btn");
     for (let answer of answers) {
         answer.addEventListener("click", () => {
             answer.classList.add("selected");
-            checkAnswer(corectAns, mode);
+            checkAnswer(correctAns, mode);
         });
     }
 }
@@ -67,15 +67,15 @@ function userAnswer(corectAns, mode) {
  * checks if selected answer is correct on click of answer button
  * and responds with correct or incorrect answer box.
  */
-function checkAnswer(corectAns, mode) {
+function checkAnswer(correctAns, mode) {
     let selctedAnswer = document.getElementsByClassName("selected");
     let text = selctedAnswer[0].getAttribute("value");
-    if (text === corectAns) {
+    if (text === correctAns) {
         correctBox(mode);
         correctScore();
         questionCounter(); 
     } else {
-        incorrectBox(mode);
+        incorrectBox(correctAns, mode);
         incorrectScore();
         questionCounter();
     }
@@ -101,7 +101,9 @@ function correctBox (mode) {
 /**
  * hides question box and shows incorrect answer box and text when called.
  */
-function incorrectBox (mode) {
+function incorrectBox (correctAns ,mode) {
+    let incorrectMsg = document.getElementById("correct-span");
+    incorrectMsg.innerText = correctAns;
     let incorrectAnswerBox = document.getElementById("incorrect");
     let answerBox = document.getElementById("answer-card");
     incorrectAnswerBox.style.display = "block";
