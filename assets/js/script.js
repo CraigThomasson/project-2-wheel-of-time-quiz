@@ -133,20 +133,25 @@ function incorrectBox (mode) {
 
 /**
  * runs the dificulty level the user selects.
+ * uses choosequestionlist finction to genrate correct question list
+ * uses load question function to load questions and answers on to html
  */
 function runGame(gameDif) {
 let difButtons = document.getElementById("dif-container");
 difButtons.style.display = "none";   
     if (gameDif === "easy") {
-        easyMode();
+        let mode = "easy";
+        chooseQuestionList("easyMode");
+        loadQuestion(mode);
     } else if (gameDif === "medium") {
-        mediumMode();
+        let mode = "medium";
+        chooseQuestionList("mediumMode");
+        loadQuestion(mode);
     } else if (gameDif === "hard") {
-        hardMode();
-    } else {
-        alert(`unknow difaculty: ${gameDif}`);
-        throw `unkown game difaculty; ${gameDif}. aborting!`;
-    }
+        let mode = "hard";
+        chooseQuestionList("hardMode");
+        loadQuestion(mode);
+    } 
 }
 
 /**
@@ -229,31 +234,3 @@ function resetQuiz() {
         location.reload();
     })
 }
-
-/**
- * generates  random easy questions and answers
- */
-function easyMode() {
-    let mode = "easy";
-    chooseQuestionList("easyMode");
-    loadQuestion(mode);
-}
-
-/**
- * generates  random medium questions and answers
- */
-function mediumMode() {
-    let mode = "medium";
-    chooseQuestionList("mediumMode");
-    loadQuestion(mode);
-}
-
-/**
- * generates  random hard questions and answers
- */
-function hardMode() {
-    let mode = "hard";
-    chooseQuestionList("hardMode");
-    loadQuestion(mode);
-}
-
