@@ -1,4 +1,3 @@
-
 //loads game and event listeners. 
 //code largely influenced by code institutes love maths project
 document.addEventListener("DOMContentLoaded", function() {
@@ -18,6 +17,7 @@ document.addEventListener("DOMContentLoaded", function() {
 // will shuffel the questions before being called latter in the code 
 shuffle(easyQuestions);
 shuffle(mediumQuestions);
+shuffle(hardQuestions);
 
 /**
  * pics the correct question set for the selected game mode
@@ -33,7 +33,7 @@ function chooseQuestionList(modeSelect) {
     if (modeSelect ==="hardMode") {
         questionSet = hardQuestions;
     }
-};
+}
 
 /**
  * fisher-yeates shuffle
@@ -202,7 +202,7 @@ function endQuiz() {
     let answerBox = document.getElementById("answer-card");
     let incorrectAnswerBox = document.getElementById("incorrect");
     let endBox = document.getElementById("end-box");
-    let total = parseInt(document.getElementById("correct-score").innerText)
+    let total = parseInt(document.getElementById("correct-score").innerText);
     resetQuiz();
     document.getElementById("total").innerText = total;
     if (count == 5) {
@@ -220,5 +220,5 @@ function resetQuiz() {
     let reset = document.getElementById("restart");
     reset.addEventListener("click", () => {
         location.reload();
-    })
+    });
 }
