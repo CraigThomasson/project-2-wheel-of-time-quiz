@@ -87,19 +87,19 @@ let hardQuestions = [
     question: "When was Siuan Sanche  raised to the Amyrlin Seat?",
     answers:["988 NE", "999 NE", "977 NE", "966 NE"],
     corectAnswer: "988 NE",
-    img: "assets/media/images/swordsman.jpg"
+    img: "assets/media/images/white-tower.jpg"
     },
     {
     question:"Fortuna’s full name is Fortuona Athaem Devi…?",
     answers: ["Hawkwing", "Farshaw", "Paendrag", "Tamarath"],
     corectAnswer: "Paendrag",
-    img: "assets/media/images/swordsman.jpg"
+    img: "assets/media/images/The-Wheel-of-Time-2.jpg"
     },
     {
     question: "What was the name of the university in the city of V'saine, in the Age of Legends?",
     answers: ["Collam Daan", "The Sharom", "Paaran Disen", "Mar Ruois"],
     corectAnswer: "Collam Daan",
-    img: "assets/media/images/swordsman.jpg"
+    img: "assets/media/images/sphere.jpg"
     },
     {
     question: "A Warder’s cloak is made from which material??",
@@ -111,20 +111,19 @@ let hardQuestions = [
     question: "What is the name of the Sea Folk prophecies that predict the coming of the Coramoor?",
     answers: ["Karaethon prophecies", "Essanik prophecies", "Jendai prophecies", "shadow prophecies"],
     corectAnswer: "Jendai prophecies",
-    img: "assets/media/images/swordsman.jpg"
+    img: "assets/media/images/prophesy.jpg"
     },
     {
     question: "Rands farther by blood is?",
     answers: ["Tam", "Janduin", "Rhuarc", "Mandelain"],
     corectAnswer: "Janduin",
-    img: "assets/media/images/swordsman.jpg"
+    img: "assets/media/images/dad.jpg"
     },
     {
     question: "Who was Thom’s nephew?",
     answers: ["Alric", "Owyn", "Eamon", "Earwin"],
     corectAnswer: "Owyn",
-    img: "assets/media/images/swordsman.jpg"
+    img: "assets/media/images/flute.jpg"
     }
-
 ];
 
