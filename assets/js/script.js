@@ -203,15 +203,15 @@ function endQuiz() {
     let incorrectAnswerBox = document.getElementById("incorrect");
     let endBox = document.getElementById("end-box");
     let total = parseInt(document.getElementById("correct-score").innerText);
-    let questionCard = document.getElementsByClassName("questions-card")
+    let questionCard = document.getElementById("question-card")
     resetQuiz();
     document.getElementById("total").innerText = total;
     if (count == 5) {
+        questionCard.style.display = "none";
         endBox.style.display = "block";
         correctAnswerBox.style.display = "none";
         answerBox.style.display = "none";
         incorrectAnswerBox.style.display = "none";
-        questionCard.style.display = "none";
     }
 }
 
