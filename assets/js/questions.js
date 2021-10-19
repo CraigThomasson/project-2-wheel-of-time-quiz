@@ -114,7 +114,7 @@ let hardQuestions = [
     img: "assets/media/images/prophesy.jpg"
     },
     {
-    question: "Rands farther by blood is?",
+    question: "Rands father by blood is?",
     answers: ["Tam", "Janduin", "Rhuarc", "Mandelain"],
     corectAnswer: "Janduin",
     img: "assets/media/images/dad.jpg"
