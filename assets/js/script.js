@@ -203,6 +203,7 @@ function endQuiz() {
     let incorrectAnswerBox = document.getElementById("incorrect");
     let endBox = document.getElementById("end-box");
     let total = parseInt(document.getElementById("correct-score").innerText);
+    let questionCard = document.getElementsByClassName("questions-card")
     resetQuiz();
     document.getElementById("total").innerText = total;
     if (count == 5) {
@@ -210,6 +211,7 @@ function endQuiz() {
         correctAnswerBox.style.display = "none";
         answerBox.style.display = "none";
         incorrectAnswerBox.style.display = "none";
+        questionCard.style.display = "none";
     }
 }
 
