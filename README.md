@@ -25,25 +25,9 @@ Click [here](https://craigthomasson.github.io/project-2-wheel-of-time-quiz/) to 
 * Test the quiz with fans of the book series 
 
 
-## Wireframes for Original Concept
+## Wireframe for Original Concept
 
-### First Draft of Home Page
-
-<img src="documentation/first-wf-hp.PNG" width="450" height="250" alt="wire frame of home page">
-
-### First Draft of Pricing Page
-
-<img src="documentation/first-wf-3.PNG" width="450" height="250" alt="wire frame of pricing page">
-
-### First Draft of Contact Page
-
-<img src="documentation/first-wf-con.PNG" width="450" height="250" alt="wire frame of contacts page">
-
-## Updated Wireframe
-
-### One Page Layout
-
-<img src="documentation/wf-one-page.PNG" width="450" height="auto" alt="wire frame of contacts page">
+<img src="documentation/images/quiz-app.PNG" width="450" height="300" alt="wire frame of load page">
 
 <br>
 
@@ -51,7 +35,7 @@ Click [here](https://craigthomasson.github.io/project-2-wheel-of-time-quiz/) to 
 
 ## Load Screen
 
-<img src="documentation/load-screen.PNG" width="450" height="250" alt="image of live site title acreen/about section">
+<img src="documentation/images/load-page.PNG" width="450" height="250" alt="image of lode page">
 
 * On the load screen the user will see the title and wheel of time logo and see clearly the intentions the page. There are instructed to select their role to begin the quiz. The original color scheme was red black and gold but the red on black was not accessible for all user so the color scheme is now black and gold. This scheme matches a set of book covers in a more recent addition of the books so should have a good wheel of time feel to it. 
 * The user will see the instruction for who to begin and the buttons to progress are clear to see.
@@ -60,7 +44,7 @@ Click [here](https://craigthomasson.github.io/project-2-wheel-of-time-quiz/) to 
 
 ## questions and answers
 
-<img src="documentation/sample.PNG" width="450" height="250" alt="image of sample section of the web site">
+<img src="documentation/images/q-and-a.PNG" width="450" height="250" alt="image of sample section of the web site">
 
 
 * When the user begins the quiz a question with 4 possible answers are generated as well as an image that is related to the question but not the answer. 
@@ -69,7 +53,7 @@ Click [here](https://craigthomasson.github.io/project-2-wheel-of-time-quiz/) to 
 
 ## response box
 
-<img src="documentation/contacts.PNG" width="450" height="250" alt="image of contact section of the web site">
+<img src="documentation/images/response.PNG" width="450" height="250" alt="image of contact section of the web site">
 
 * Once the user selects an answer they will see a correct or incorrect answer box
 * The correct answer box confirms the answer is correct and display a button to move to the next question
@@ -79,12 +63,9 @@ Click [here](https://craigthomasson.github.io/project-2-wheel-of-time-quiz/) to 
 
 ## Footer
 
-<img src="documentation/footer.PNG" width="450" height="auto" alt="image of site footer">
-
 * The Footer is styled to match the header and to close off the page in an aesthetically pleasing way.
 * It contains links to socials and also copyright info.
 
-* I used a call to action that links to the ontact section so that user that want to hire the narrator can quickly navigated to that section of the sight
 
 ## Deployment
 
@@ -105,11 +86,10 @@ This project was deployed to git hub pages.
 
 ## Testing
 
-* The site was tested in [google chrome](documentation/chrome-testing.PNG), [Firefox](documentation/firefox-testing.PNG), [Microsoft edge](documentation/edge-testing.PNG) and [safari](documentation/safari-test.png).
+* The site was tested in [google chrome](documentation/images/load-page.PNG), [Firefox](documentation/firefox-testing.PNG), [Microsoft edge](documentation/edge-testing.PNG) and [safari](documentation/safari-test.png).
 * It was also tested on [android](documentation/android-test.jpg) and [IOS](documentation/ios-testing.jpg) phones
 * As evidenced above i also tested on multiple view ports
 * Links in nav bar where all tested to ensure they link to the correct page sections
-* Check form to ensure it validates 
 
 ## Validation
 
@@ -121,7 +101,7 @@ This project was deployed to git hub pages.
 <img src="documentation/light-house-scores.PNG" width="450" height="auto" alt="image of lighthouse results">
 
 ## Technologies used
-HTML, CSS. Reaper DAW to create sample audio.
+HTML, CSS and JavaScript.
 
 ## credits 
 
@@ -133,8 +113,7 @@ HTML, CSS. Reaper DAW to create sample audio.
     * https://www.pexels.com/photo/woman-in-gray-tank-top-lying-on-bed-3807729/
     * https://unsplash.com/photos/ZDNyhmgkZlQ
     * https://unsplash.com/photos/Dz4iJ3v4-X4
-* I used this site as a reference for using CSS grids: https://learncssgrid.com/
-* I based my audio code on code examples from this page: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/audio
+
 
 ## acknowledgements
 
