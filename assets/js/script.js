@@ -155,7 +155,6 @@ difButtons.style.display = "none";
     let img = questionSet[i]["img"];
     document.getElementById("answer-card").style.backgroundImage = `url(${img})`;
     document.getElementById("question").innerHTML = questionSet[i]["question"];
-    
     answers.innerHTML = 
         `<div class="row justify-content-center">
         <input type=button id="btn0" class="col-10 col-sm-4 answer-btn span-2" value="${questionSet[i]["answers"][0]}">

@@ -12,21 +12,18 @@ Click [here](https://craigthomasson.github.io/project-2-wheel-of-time-quiz/) to 
 
 ## Goals
 * Create fun interactive quiz that fans of the wheel of time book series will enjoy playing
-* To make the quiz repayable through the use of 3 sets of question with increasing levels of difficult questions to answer
+* To make the quiz repayable through the use of 3 sets of question with increasing levels of difficult  questions to answer
 * To make the quiz intuitive to use and provide satisfying feedback for the user
 * Design a quiz that is aesthetically pleasing
 * To make the quiz responsive
 
 
 ##### To achieve these goals I will need to:
-* Create a website with good searchability
-* Have playable examples of work that is easy to access
-* Ensure the contacts section is clear and easy to find
-* Create a UX design that is intuitive to use and flows well
-* The users will:
-    * Be looking to hire an audiobook narrator
-    * Be able to quickly navigate the site to sample work and the contact section
-    * Have a clear understanding of the services offered
+* Use JavaScript to create a fictional quiz
+* Use CSS and HTML for the content and to make it look good
+* Use relative and accurate source material for the quiz
+* Test the quiz with fans of the book series 
+
 
 ## Wireframes for Original Concept
 
@@ -50,44 +47,35 @@ Click [here](https://craigthomasson.github.io/project-2-wheel-of-time-quiz/) to 
 
 <br>
 
-## Functionality
+## Functionality/UserStory
 
-## Load Screen/About Section
+## Load Screen
 
 <img src="documentation/load-screen.PNG" width="450" height="250" alt="image of live site title acreen/about section">
 
-The user can see what services are offered by the narrator in the About section, and can see clear navigation options to the Samples section and the Contact section. There is also a call to action at the end of the About section, so the user can be directed to the Contact page. This will make it easier for first time users to navigate the page. The call to action will also help returning users who may be comparing narrators, to quickly navigate to the Contact page.
-* The title and subtitle make it clear that the site is for audio book narration and the About section clearly states the services offered
-* There is a Nav bar that will send the user to each section of the page
-* I decided to turn this site in to a one-page site part way through the project as this will mean that everything the user needs is easy to access
-* I used a call to action that links to the Contact section so that the user can quickly navigate to that section of the site
+* On the load screen the user will see the title and wheel of time logo and see clearly the intentions the page. There are instructed to select their role to begin the quiz. The original color scheme was red black and gold but the red on black was not accessible for all user so the color scheme is now black and gold. This scheme matches a set of book covers in a more recent addition of the books so should have a good wheel of time feel to it. 
+* The user will see the instruction for who to begin and the buttons to progress are clear to see.
+* The user is present with 3 options novice, apprentice and aes sedai these are position with in the white tower in the will of time series and book fans will understand there meaning and feel a little more immersed in the quiz. This also gives a sense of progression moving through the roles. 
 
-## Sample Section
+
+## questions and answers
 
 <img src="documentation/sample.PNG" width="450" height="250" alt="image of sample section of the web site">
 
-The Samples in this section are easy for the user to find and offer brief descriptions to give the user some context.
- * This section contains two audio players with samples of the narrator's work 
- * The Samples section is the reason I chose to change to a one page style website, as it made more sense to have the samples easily accessible to the user
-* The audio players do not autoplay when the site loads and can be controlled by the user 
-* This section also contains an image of the audio equipment a narrator would use
 
-## Contact Section 
+* When the user begins the quiz a question with 4 possible answers are generated as well as an image that is related to the question but not the answer. 
+* The questions are each in their own button. When clicked they will generate a correct or incorrect box depending on if they click the right or wrong answer. 
+ 
+
+## response box
 
 <img src="documentation/contacts.PNG" width="450" height="250" alt="image of contact section of the web site">
 
-Here the user can submit a request for their audio to be recorded. The form is clearly labelled and allows the user to leave all relevant information about their book.
+* Once the user selects an answer they will see a correct or incorrect answer box
+* The correct answer box confirms the answer is correct and display a button to move to the next question
+* The incorrect answer box tell the user the answer was wrong and also displays the correct answer. There is also a button to move on to the next question. 
+* Once a question in answer the user will also see the question counter move up as well as the correct and incorrect answer counter. This helps the user keep track of their progress. 
 
-* This section contains a form and basic description about hiring the narrator.
-* There is also an image that fits the themes of the site.
-* The form consists of: 
-    * Text inputs for names
-    * Email inputs
-    * Number inputs
-    * Inputs to upload docs
-    * Text area inputs for more details
-    * A submit button
-* All inputs from the form have the required attribute
 
 ## Footer
 
