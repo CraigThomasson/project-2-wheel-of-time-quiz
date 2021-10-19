@@ -11,8 +11,12 @@ Click [here](https://craigthomasson.github.io/project-2-wheel-of-time-quiz/) to 
 <br>
 
 ## Goals
-The goal was to create a site that will increase the online presence of the audiobook narrator, and increase the amount of potential work they are offered. The site needs to clearly state what service is offered, with a clear example of the quality of the product. 
-At the same time, it should make it quick and easy to contact the narrator and request work.
+* Create fun interactive quiz that fans of the wheel of time book series will enjoy playing
+* To make the quiz repayable through the use of 3 sets of question with increasing levels of difficult questions to answer
+* To make the quiz intuitive to use and provide satisfying feedback for the user
+* Design a quiz that is aesthetically pleasing
+* To make the quiz responsive
+
 
 ##### To achieve these goals I will need to:
 * Create a website with good searchability
