@@ -104,8 +104,8 @@ This project was deployed to git hub pages.
 
 ## Validation
 
-* CSS was ran through (Jigsaw) validator and has no errors: results [here](documentation/css-validation.PNG)
-* HTML was ran through W3C validator with no issues: results <a href="http://validator.w3.org/check?uri=https://craigthomasson.github.io/project-one-repo">here</a>
+* CSS was ran through (Jigsaw) validator and has no errors: results [here](documentation/images/css-val.PNG)
+* HTML was ran through W3C validator with no issues: results <a href="http://validator.w3.org/check?uri=https://craigthomasson.github.io/project-2-wheel-of-time-quiz/">here</a>
 
 ## Lighthouse Scores
 
@@ -142,15 +142,15 @@ HTML, CSS and JavaScript.
 
 ## acknowledgements
 
-* I would like to thank my mentor Chriss Quinn for firstly Introducing me to Grids in CSS and second for being an outstanding mentor. He made sure I always pushed my self and tested my abilities during this project. 
-* A big thanks to the Retro Space Cowbells team for the suport and posative vibes. 
+* I would like to thank my mentor Chriss Quinn again for pushing me to produce my best work and being the best mentor that ever menteed. 
+* Thank you to every one in the Wheel of Time <a href="https://www.facebook.com/groups/2251256361856379">fan group</a> for all of there great feedback.
 
 
 
 
 
 ### source
-* This helped me understand how to randomise my questions: https://stackoverflow.com/questions/43847375/creating-random-questions-and-answers-javascript
+
 
 * used these answers as inspiration for clearselected function- https://stackoverflow.com/questions/40153194/how-to-remove-class-from-siblings-of-an-element-without-jquery
 
