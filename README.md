@@ -69,13 +69,10 @@ Click [here](https://craigthomasson.github.io/project-2-wheel-of-time-quiz/) to 
 * The users score is also displayed.
 * There is a button to return the user to the load page. This button also contains text thematically in line with the book series. 
 
-
-
 ## Footer
 
 * The Footer is styled to match the header and to close off the page in an aesthetically pleasing way.
 * It contains links to my github, linkedin and also copyright info.
-
 
 ## Deployment
 
@@ -98,8 +95,12 @@ This project was deployed to git hub pages.
 
 * The site was tested in [google chrome](documentation/images/load-page.PNG), [Firefox](documentation/images/firefox.PNG), [Microsoft edge](documentation/edge.PNG) and [safari](documentation/safari-test.png).
 * It was also tested on [android](documentation/android-test.jpg) and [IOS](documentation/ios-testing.jpg) phones
-* As evidenced above i also tested on multiple view ports
+* As evidenced above I also tested on multiple view ports as evidanced by the images above
 * Links in nav bar where all tested to ensure they link to the correct pages
+* The quiz was also play tested by members of a wheel of time fan group on facebook. [playtest-1](documentation/images/playtest-1.PNG) [playtest-2](documentation/images/playtest-2.PNG) [playtest-3](documentation/images/playtest-3.PNG) [playtest-4](documentation/images/playtest-4.PNG)
+* 1 bug in the code was found in the play test that caused an extra question to be displayed when the quiz ends. to fix this i simply hid the question box in the end game function.
+* Several spelling/gramar issues where also found and fixed
+* The feedback for the useability and play ability of the quiz was overwhelmingly positive. The group enjoyed the language inspired by the book and found the quiz somewhat challenging on the harder level.
 
 ## Validation
 
@@ -118,12 +119,26 @@ HTML, CSS and JavaScript.
 ### Sources and References
 * google fonts where used in this project https://fonts.google.com/
 * font awesome was used in the footer www.fontawesome.com
-* Images souced from unsplash.com and www.pexels.com
-    * https://www.pexels.com/photo/black-corded-headphones-with-colorful-books-in-between-5939401/
-    * https://www.pexels.com/photo/woman-in-gray-tank-top-lying-on-bed-3807729/
-    * https://unsplash.com/photos/ZDNyhmgkZlQ
-    * https://unsplash.com/photos/Dz4iJ3v4-X4
-
+* Images:
+    https://www.pexels.com/photo/man-holding-sword-3408420/
+    https://pixabay.com/photos/corridor-architecture-ruins-6572354/
+    https://pixabay.com/photos/smoke-backdrop-macro-creative-4988505/
+    https://pixabay.com/photos/notes-book-game-play-books-art-2656005/ 
+    https://pixabay.com/photos/blacksmith-pincers-tools-smithy-2703384/
+    https://pixabay.com/photos/forest-mist-nature-trees-mystic-931706/
+    https://www.yahoo.com/lifestyle/wheel-time-aes-sedai-explained-154407640.html
+    https://dragonmount.com/gallery/image/1702-ogier/
+    https://www.tor.com/2020/04/23/why-cant-anyone-see-mat-cauthon-changing/
+    https://pixabay.com/photos/zanzibar-stone-town-tanzania-africa-4271064/
+    https://pixabay.com/photos/wolves-wolf-howling-moon-stars-1400819/
+    https://www.instagram.com/p/BjGiL5MHLeL/
+    https://pixabay.com/illustrations/crystal-ball-glass-sphere-bullet-4043805/
+    https://www.pexels.com/photo/person-holding-brown-wooden-tray-with-cookies-6014303/
+    https://www.pexels.com/photo/selective-focus-photography-of-child-s-hand-1250452/
+    https://unsplash.com/photos/wfVREQs7KXQ
+    https://pixabay.com/photos/bar-pub-comfortable-the-atmosphere-3407484/
+    https://pixabay.com/photos/horse-soldier-warrior-war-battle-4596827/
+    https://otakukart.com/561823/amazons-epic-the-wheel-of-time-is-finally-set-for-a-2021-release/
 
 ## acknowledgements
 
