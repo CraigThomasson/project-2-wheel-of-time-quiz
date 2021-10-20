@@ -38,8 +38,8 @@ Click [here](https://craigthomasson.github.io/project-2-wheel-of-time-quiz/) to 
 <img src="documentation/images/load-page.PNG" width="450" height="250" alt="image of lode page">
 
 * On the load screen the user will see the title and wheel of time logo and see clearly the intentions the page. There are instructed to select their role to begin the quiz. The original color scheme was red black and gold but the red on black was not accessible for all user so the color scheme is now black and gold. This scheme matches a set of book covers in a more recent addition of the books so should have a good wheel of time feel to it. 
-* The user will see the instruction for who to begin and the buttons to progress are clear to see.
-* The user is present with 3 options novice, apprentice and aes sedai these are position with in the white tower in the will of time series and book fans will understand there meaning and feel a little more immersed in the quiz. This also gives a sense of progression moving through the roles. 
+* The user will see the instruction for how to begin and the buttons to progress are clear to see.
+* The user is present with 3 options Novice, Apprentice and Aes Sedai these are positions within the White Tower in the wheell of Time series and book fans will understand there meaning and feel a little more immersed in the quiz. This also gives a sense of progression moving through the roles. 
 
 
 ## questions and answers
@@ -58,13 +58,21 @@ Click [here](https://craigthomasson.github.io/project-2-wheel-of-time-quiz/) to 
 * Once the user selects an answer they will see a correct or incorrect answer box
 * The correct answer box confirms the answer is correct and display a button to move to the next question
 * The incorrect answer box tell the user the answer was wrong and also displays the correct answer. There is also a button to move on to the next question. 
-* Once a question in answer the user will also see the question counter move up as well as the correct and incorrect answer counter. This helps the user keep track of their progress. 
+* Once a question is answered the user will also see the question counter move up as well as the correct and incorrect answer counter. This helps the user keep track of their progress. 
+
+## endquiz box
+
+* When the user has answered 5 questions the quiz will end and a box will displayed informing the user of this
+* The box contains a message with text inspired by a popular phrase in the book series this should help the user stay immersed in the theme of the quiz. 
+* The users score is also displayed.
+* There is a button to return the user to the load page. This button also contains text thematically in line with the book series. 
+
 
 
 ## Footer
 
 * The Footer is styled to match the header and to close off the page in an aesthetically pleasing way.
-* It contains links to socials and also copyright info.
+* It contains links to my github, linkedin and also copyright info.
 
 
 ## Deployment
