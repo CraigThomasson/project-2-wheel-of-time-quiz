@@ -34,6 +34,10 @@ header {
     margin-bottom: 10px;
 }
 
+.dif-btn {
+    margin-top: 5px;
+}
+
 button {
     background-color: rgba(219, 166, 34, 0.7);
     font-weight: 600;
