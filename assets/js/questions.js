@@ -7,7 +7,7 @@ let easyQuestions = [
     },
     {
     question:"What item does Mat take from Shadar Logoth?",
-    answers: ["Gold coin", "Silver dice set", "Ruby-hilted dagger", "Crystal sward "],
+    answers: ["Gold coin", "Silver dice set", "Ruby-hilted dagger", "Crystal sword "],
     corectAnswer: "Ruby-hilted dagger",
     img: "assets/media/images/dark-ruins.jpg"
     },
@@ -52,7 +52,7 @@ let mediumQuestions = [
     },
     {
     question:"How many sisters does Mat have?",
-    answers: ["One", "Two", "Three", "four"],
+    answers: ["One", "Two", "Three", "Four"],
     corectAnswer: "Two",
     img: "assets/media/images/matt.jpg"
     },
@@ -102,14 +102,14 @@ let hardQuestions = [
     img: "assets/media/images/sphere.jpg"
     },
     {
-    question: "A Warder’s cloak is made from which material??",
+    question: "A Warder’s cloak is made from which material?",
     answers: ["Fabrial Fibers", "Organic Organza", "Shimmer Silk", "Fancloth"],
     corectAnswer: "Fancloth",
     img: "assets/media/images/swordsman.jpg"
     },
     {
     question: "What is the name of the Sea Folk prophecies that predict the coming of the Coramoor?",
-    answers: ["Karaethon prophecies", "Essanik prophecies", "Jendai prophecies", "shadow prophecies"],
+    answers: ["Karaethon prophecies", "Essanik prophecies", "Jendai prophecies", "Shadow prophecies"],
     corectAnswer: "Jendai prophecies",
     img: "assets/media/images/prophesy.jpg"
     },

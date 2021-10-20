@@ -44,7 +44,7 @@ Click [here](https://craigthomasson.github.io/project-2-wheel-of-time-quiz/) to 
 
 ## questions and answers
 
-<img src="documentation/images/q-and-a.PNG" width="450" height="250" alt="image of sample section of the web site">
+<img src="documentation/images/q-and-a.PNG" width="450" height="250" alt="image of question and answer box>
 
 
 * When the user begins the quiz a question with 4 possible answers are generated as well as an image that is related to the question but not the answer. 
@@ -53,7 +53,7 @@ Click [here](https://craigthomasson.github.io/project-2-wheel-of-time-quiz/) to 
 
 ## response box
 
-<img src="documentation/images/response.PNG" width="450" height="250" alt="image of contact section of the web site">
+<img src="documentation/images/response.PNG" width="450" height="250" alt="image of response box">
 
 * Once the user selects an answer they will see a correct or incorrect answer box
 * The correct answer box confirms the answer is correct and display a button to move to the next question
@@ -61,6 +61,8 @@ Click [here](https://craigthomasson.github.io/project-2-wheel-of-time-quiz/) to 
 * Once a question is answered the user will also see the question counter move up as well as the correct and incorrect answer counter. This helps the user keep track of their progress. 
 
 ## endquiz box
+
+<img src="documentation/images/end-quiz.PNG" width="450" height="250" alt="image of end-quiz box">
 
 * When the user has answered 5 questions the quiz will end and a box will displayed informing the user of this
 * The box contains a message with text inspired by a popular phrase in the book series this should help the user stay immersed in the theme of the quiz. 
@@ -94,10 +96,10 @@ This project was deployed to git hub pages.
 
 ## Testing
 
-* The site was tested in [google chrome](documentation/images/load-page.PNG), [Firefox](documentation/firefox-testing.PNG), [Microsoft edge](documentation/edge-testing.PNG) and [safari](documentation/safari-test.png).
+* The site was tested in [google chrome](documentation/images/load-page.PNG), [Firefox](documentation/images/firefox.PNG), [Microsoft edge](documentation/edge.PNG) and [safari](documentation/safari-test.png).
 * It was also tested on [android](documentation/android-test.jpg) and [IOS](documentation/ios-testing.jpg) phones
 * As evidenced above i also tested on multiple view ports
-* Links in nav bar where all tested to ensure they link to the correct page sections
+* Links in nav bar where all tested to ensure they link to the correct pages
 
 ## Validation
 
