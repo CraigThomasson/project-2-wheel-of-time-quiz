@@ -24,7 +24,7 @@ let easyQuestions = [
     img: "assets/media/images/smithy.jpg"
     },
     {
-    question: "Which of these colours does not belong to and Ajah of the White Tower?",
+    question: "Which of these colours does not belong to an Ajah of the White Tower?",
     answers: ["green", "Purple", "Blue", "Red"],
     corectAnswer: "Purple",
     img: "assets/media/images/white-tower.jpg"
@@ -36,7 +36,7 @@ let easyQuestions = [
     img: "assets/media/images/forest.jpg"
     },
     {
-    question: "What condition effects Ogier when they are away from steadings?",
+    question: "What condition affects Ogier when they are away from their stedding?",
     answers: ["The Needing", "The Wanting", "The Yearning", "The Longing"],
     corectAnswer: "The Longing",
     img: "assets/media/images/ogire.jpg"
