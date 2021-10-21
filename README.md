@@ -106,10 +106,13 @@ This project was deployed to git hub pages.
 
 * CSS was ran through (Jigsaw) validator and has no errors: results [here](documentation/images/css-val.PNG)
 * HTML was ran through W3C validator with no issues: results <a href="http://validator.w3.org/check?uri=https://craigthomasson.github.io/project-2-wheel-of-time-quiz/">here</a>
+* JS was ran through JSHint whith [these](documentation/images/js-val.PNG) results. (there where also several missing semicolans that i added befre tacking this screen shot.)
 
 ## Lighthouse Scores
 
-<img src="documentation/light-house-scores.PNG" width="450" height="auto" alt="image of lighthouse results">
+<img src="documentation/images/lighthouse.PNG" width="450" height="auto" alt="image of lighthouse results">
+
+* these are results from my second run. in my first run i had to add margins to dif butens for mobile sizes and meta discription in the head of the HTML.
 
 ## Technologies used
 HTML, CSS and JavaScript.

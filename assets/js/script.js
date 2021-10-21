@@ -202,7 +202,7 @@ function endQuiz() {
     let incorrectAnswerBox = document.getElementById("incorrect");
     let endBox = document.getElementById("end-box");
     let total = parseInt(document.getElementById("correct-score").innerText);
-    let questionCard = document.getElementById("question-card")
+    let questionCard = document.getElementById("question-card");
     resetQuiz();
     document.getElementById("total").innerText = total;
     if (count == 5) {
