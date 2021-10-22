@@ -11,23 +11,38 @@ body {
     display: flex;
     flex-direction: column;
 }
-
-.box-shadow {
-    box-shadow: 0 -3px 12px rgb(54, 52, 34);
-}
+/* header */
 
 header {
     margin-top: 15px;
     background-color: rgba(43, 43, 42, 0.6);
 }
 
+/* general rules */
+
 .center-text {
     text-align: center;
 }
 
-.answers {
-    padding: 60px;
+.box-shadow {
+    box-shadow: 0 -3px 12px rgb(54, 52, 34);
 }
+
+button {
+    background-color: rgba(219, 166, 34, 0.7);
+    font-weight: 600;
+    color: black;
+}
+
+.card { 
+    min-height: 30vh;
+    display: none;
+    background-color: rgba(43, 43, 42, 0.04);
+}
+
+/* game board */
+
+/* difficulty buttons */
 
 #dif-container {
     margin-top: 20px;
@@ -38,20 +53,10 @@ header {
     margin-top: 5px;
 }
 
-button {
-    background-color: rgba(219, 166, 34, 0.7);
-    font-weight: 600;
-    color: black;
-}
+/* answer section */
 
-.questions-card {
-    background-color: rgba(43, 43, 42, 0.6);
-}
-
-.card { 
-    min-height: 30vh;
-    display: none;
-    background-color: rgba(43, 43, 42, 0.04);
+.answers {
+    padding: 60px;
 }
 
 .answer-btn {
@@ -64,6 +69,12 @@ button {
     padding: 1px;
 }
 
+/* question section */
+
+.questions-card {
+    background-color: rgba(43, 43, 42, 0.6);
+}
+
 #answer-card {
     min-height: 350px;
     background-image: url(../media/images/The-Wheel-of-Time-2.jpg);
@@ -73,6 +84,8 @@ button {
     background-size: cover;
     margin-bottom: 20px;
 }
+
+/* footer */
 
 footer {
     margin-top: auto;
@@ -88,6 +101,8 @@ footer a {
     font-size: x-large;
     margin-inline-end: 10px;
 }
+
+/* media queries */
 
 @media screen and (min-width:576px) {
     .counters {
