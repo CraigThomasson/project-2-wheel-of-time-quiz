@@ -32,9 +32,9 @@
         </div>
         <!-- displays a score board for the quiz -->
         <div class="row score-card center-text">
-            <p class="col-4 col-sm-4 scores">Q:<span id="question-counter">0</span></p>
-            <p class="col-4 col-sm-4 scores"><i class="fas fa-check-circle"></i>:<span id="correct-score">0</span></p>
-            <p class="col-4 col-sm-4 scores"><i class="fas fa-times-circle"></i>:<span id="incorrect-score">0</span></p>
+            <p class="col-4 col-sm-4 scores counters">Q:<span id="question-counter">0</span></p>
+            <p class="col-4 col-sm-4 scores counters"><i class="fas fa-check-circle"></i>:<span id="correct-score">0</span></p>
+            <p class="col-4 col-sm-4 scores counters"><i class="fas fa-times-circle"></i>:<span id="incorrect-score">0</span></p>
         </div>
         <!-- displays quiz in this section -->
         <section id="game-board">
@@ -49,13 +49,12 @@
             </div>
             <!-- displays if correct answer is picked -->
             <div id="correct" class="card center-text box-shadow">
-                <h2>correct answer!</h2>
-                <p id="correct-text"></p>
+                <h3>correct answer!</h3>
                 <BUtton id="next-btn">Next</BUtton>
             </div>
             <!-- displayes if incorrect answer is picked -->
             <div id="incorrect" class="card center-text box-shadow">
-                <h2>wrong answer!</h2>
+                <h3>wrong answer!</h3>
                 <p id="incorrect-text">The correct answer was <span id="correct-span"></span>.</p>
                 <BUtton id="incorrect-next-btn">Next</BUtton>
             </div>
