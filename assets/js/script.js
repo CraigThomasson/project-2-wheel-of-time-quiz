@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 );
 
-// will shuffel the questions before being called latter in the code 
+// will shuffle the questions before being called latter in the code 
 shuffle(easyQuestions);
 shuffle(mediumQuestions);
 shuffle(hardQuestions);

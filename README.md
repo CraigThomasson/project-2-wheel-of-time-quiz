@@ -31,8 +31,7 @@ Click [here](https://craigthomasson.github.io/project-2-wheel-of-time-quiz/) to 
 
 <br>
 
-## Functionality/UserStory
-
+## Functionality
 ## Load Screen
 
 <img src="documentation/images/load-page.PNG" width="450" height="250" alt="image of lode page">
@@ -93,9 +92,10 @@ This project was deployed to git hub pages.
 
 ## Testing
 
-* The site was tested in [google chrome](documentation/images/load-page.PNG), [Firefox](documentation/images/firefox.PNG), [Microsoft edge](documentation/edge.PNG) and [safari](documentation/images/safari.PNG).
-* It was also tested on [android](documentation/android-test.jpg) and [IOS](documentation/ios-testing.jpg) phones
-* As evidenced above I also tested on multiple view ports as evidanced by the images above
+* The site was tested in [google chrome](documentation/images/load-page.PNG), [Firefox](documentation/images/firefox.PNG), [Microsoft edge](documentation/images/edge.PNG) and [safari](documentation/images/safari.PNG).
+* It was also tested on [android](documentation/images/android.jpg) and [IOS](documentation/images/ios-2.jpg) phones
+* text in buttons on ios was showing as blue originaly. to fix i specifed button color in css
+* As evidenced above I also tested on multiple view ports
 * Links in footer where all tested to ensure they link to the correct pages
 * The quiz was also play tested by members of a wheel of time fan group on facebook. [playtest-1](documentation/images/playtest-1.PNG) [playtest-2](documentation/images/playtest-2.PNG) [playtest-3](documentation/images/playtest-3.PNG) [playtest-4](documentation/images/playtest-4.PNG)
 * 1 bug in the code was found in the play test that caused an extra question to be displayed when the quiz ends. to fix this i simply hid the question box in the end game function.
