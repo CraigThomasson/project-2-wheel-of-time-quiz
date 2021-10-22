@@ -41,6 +41,7 @@ header {
 button {
     background-color: rgba(219, 166, 34, 0.7);
     font-weight: 600;
+    color: black;
 }
 
 .questions-card {

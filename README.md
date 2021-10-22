@@ -93,10 +93,10 @@ This project was deployed to git hub pages.
 
 ## Testing
 
-* The site was tested in [google chrome](documentation/images/load-page.PNG), [Firefox](documentation/images/firefox.PNG), [Microsoft edge](documentation/edge.PNG) and [safari](documentation/safari-test.png).
+* The site was tested in [google chrome](documentation/images/load-page.PNG), [Firefox](documentation/images/firefox.PNG), [Microsoft edge](documentation/edge.PNG) and [safari](documentation/images/safari.PNG).
 * It was also tested on [android](documentation/android-test.jpg) and [IOS](documentation/ios-testing.jpg) phones
 * As evidenced above I also tested on multiple view ports as evidanced by the images above
-* Links in nav bar where all tested to ensure they link to the correct pages
+* Links in footer where all tested to ensure they link to the correct pages
 * The quiz was also play tested by members of a wheel of time fan group on facebook. [playtest-1](documentation/images/playtest-1.PNG) [playtest-2](documentation/images/playtest-2.PNG) [playtest-3](documentation/images/playtest-3.PNG) [playtest-4](documentation/images/playtest-4.PNG)
 * 1 bug in the code was found in the play test that caused an extra question to be displayed when the quiz ends. to fix this i simply hid the question box in the end game function.
 * Several spelling/gramar issues where also found and fixed
@@ -106,13 +106,13 @@ This project was deployed to git hub pages.
 
 * CSS was ran through (Jigsaw) validator and has no errors: results [here](documentation/images/css-val.PNG)
 * HTML was ran through W3C validator with no issues: results <a href="http://validator.w3.org/check?uri=https://craigthomasson.github.io/project-2-wheel-of-time-quiz/">here</a>
-* JS was ran through JSHint whith [these](documentation/images/js-val.PNG) results. (there where also several missing semicolans that i added befre tacking this screen shot.)
+* JS was ran through JSHint whith [these](documentation/images/js-val.PNG) results. (there where also several missing semicolans that i added befre taking this screen shot.)
 
 ## Lighthouse Scores
 
 <img src="documentation/images/lighthouse.PNG" width="450" height="auto" alt="image of lighthouse results">
 
-* these are results from my second run. in my first run i had to add margins to dif butens for mobile sizes and meta discription in the head of the HTML.
+* these are results from my second run. in my first run i had to add margins to dif buttons for mobile sizes and meta discription in the head of the HTML.
 
 ## Technologies used
 HTML, CSS and JavaScript.
