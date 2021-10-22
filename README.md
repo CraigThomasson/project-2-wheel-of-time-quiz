@@ -148,19 +148,15 @@ HTML, CSS and JavaScript.
 
 * I would like to thank my mentor Chriss Quinn again for pushing me to produce my best work and being the best mentor that ever menteed. 
 * Thank you to every one in the Wheel of Time <a href="https://www.facebook.com/groups/2251256361856379">fan group</a> for all of there great feedback.
-
-
-
+* thanks to Matt Bodden 5p for helping me fix an issue with file baths for my images. 
 
 
 ### source
+* Code institute love sandwich project code was used as base for my event listers (line 3 - line 15 in script.js)
 
+* sean young_lead from CI slack comunity pointed me to the fisher-yates shuffle to help me with issues with my random question genrator.  
 
-* used these answers as inspiration for clearselected function- https://stackoverflow.com/questions/40153194/how-to-remove-class-from-siblings-of-an-element-without-jquery
-
-sean young_lead from CI slack comunity pointed me to the fisher-yates shuffle to help me with issues with my random question genrator.  
-
-* used code from love maths project to incremnt scores 
+* used code from love maths project to increment scores
 
 #### images 
 * https://otakukart.com/561823/amazons-epic-the-wheel-of-time-is-finally-set-for-a-2021-release/

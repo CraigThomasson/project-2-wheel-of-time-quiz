@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 );
 
-// will shuffle the questions before being called latter in the code 
+// will shuffle the questions before being called.
 shuffle(easyQuestions);
 shuffle(mediumQuestions);
 shuffle(hardQuestions);
@@ -50,8 +50,8 @@ function shuffle(array) {
     }
 
 /**
- * this adds the selected class to a anserbutton when clicked by the user.
- * it also calls the clearselected function to remove the selected class from other buttons.
+ * this adds the selected class to a answer button when clicked by the user.
+ * also passes correct answer and mode to the checkanswer function.
  */
 function userAnswer(correctAns, mode) {
     let answers = document.getElementsByClassName("answer-btn");
@@ -83,6 +83,7 @@ function checkAnswer(correctAns, mode) {
 
 /**
  * hides question box and shows correct answer box and text when called.
+ * adds event lister to next button
  */
 function correctBox (mode) {
     let correctAnswerBox = document.getElementById("correct");
@@ -100,6 +101,7 @@ function correctBox (mode) {
 
 /**
  * hides question box and shows incorrect answer box and text when called.
+ * adds event lister to next button
  */
 function incorrectBox (correctAns ,mode) {
     let incorrectMsg = document.getElementById("correct-span");
@@ -119,12 +121,12 @@ function incorrectBox (correctAns ,mode) {
 
 /**
  * runs the dificulty level the user selects.
- * uses choosequestionlist finction to genrate correct question list
- * uses load question function to load questions and answers on to html
+ * uses choosequestionlist function to generate correct question list
+ * uses loadQuestion function to load questions and answers on to the html
  */
 function runGame(gameDif) {
 let difButtons = document.getElementById("dif-container");
-difButtons.style.display = "none";   
+difButtons.style.display = "none"; //hides dificulty buttons when game is running.  
     if (gameDif === "easy") {
         let mode = "easy";
         chooseQuestionList("easyMode");
@@ -143,15 +145,13 @@ difButtons.style.display = "none";
 /**
  * loads questions and answers from chosen question set.
  * gets questions and answers from the shuffeld question set.
- * runs user anser function to check questions
+ * runs user answer function to check questions.
+ * passed mode and correct answer to userAnswer function
  */
  function loadQuestion(mode) {
     let answers = document.getElementById("answer-container");
     let i = parseInt(document.getElementById("question-counter").innerText);
-    console.log(i);
-    console.log(questionSet);
     let correctAns = questionSet[i]["corectAnswer"];
-    console.log(correctAns);
     let img = questionSet[i]["img"];
     document.getElementById("answer-card").style.backgroundImage = `url(${img})`;
     document.getElementById("question").innerHTML = questionSet[i]["question"];
@@ -194,6 +194,7 @@ function questionCounter () {
 
 /**
  * brings up the end card when the desiered amount of questions have been answerd.
+ * ands event listner to button and resets the page when clicked.
  */
 function endQuiz() {
     let count =  parseInt(document.getElementById("question-counter").innerText);
@@ -215,7 +216,7 @@ function endQuiz() {
 }
 
 /**
- * this reloads the page when called
+ * this reloads the page when restart button is clicked.
  */
 function resetQuiz() {
     let reset = document.getElementById("restart");
