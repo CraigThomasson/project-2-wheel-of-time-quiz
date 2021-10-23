@@ -157,12 +157,12 @@ difButtons.style.display = "none"; //hides difficulty buttons when game is runni
     document.getElementById("question").innerHTML = questionSet[i]["question"];
     answers.innerHTML = 
         `<div class="row justify-content-center">
-        <input type=button id="btn0" class="col-10 col-sm-4 answer-btn span-2" value="${questionSet[i]["answers"][0]}">
-        <input type=button id="btn1" class="col-10 col-sm-4 answer-btn" value="${questionSet[i]["answers"][1]}">
+        <input type=button id="btn0" aria-label="${questionSet[i]["answers"][0]}" class="col-10 col-sm-4 answer-btn span-2" value="${questionSet[i]["answers"][0]}">
+        <input type=button id="btn1" aria-label="${questionSet[i]["answers"][1]}" class="col-10 col-sm-4 answer-btn" value="${questionSet[i]["answers"][1]}">
         </div>
         <div class="row justify-content-center">
-        <input type=button id="btn2" class="col-10 col-sm-4 answer-btn" value="${questionSet[i]["answers"][2]}">
-        <input type=button id="btn3" class="col-10 col-sm-4 answer-btn" value="${questionSet[i]["answers"][3]}">
+        <input type=button id="btn2" aria-label="${questionSet[i]["answers"][2]}" class="col-10 col-sm-4 answer-btn" value="${questionSet[i]["answers"][2]}">
+        <input type=button id="btn3" aria-label="${questionSet[i]["answers"][3]}" class="col-10 col-sm-4 answer-btn" value="${questionSet[i]["answers"][3]}">
         </div>`;
     userAnswer(correctAns, mode);
 }
