@@ -111,9 +111,10 @@ This project was deployed to Github pages.
 
 ## Lighthouse Scores
 
-<img src="documentation/images/lighthouse.PNG" width="450" height="auto" alt="image of lighthouse results">
+<img src="documentation/images/lighthouse-2.PNG" width="450" height="auto" alt="image of lighthouse results">
 
 * These are results from my second run. In my first run I had to add margins to difficulty buttons for mobile sizes and meta description in the head of the HTML.
+* I also changed a h3 element to h2 to help with accessibility. 
 
 ## Technologies used
 HTML, CSS and JavaScript.
