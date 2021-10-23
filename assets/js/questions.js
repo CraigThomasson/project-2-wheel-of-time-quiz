@@ -18,14 +18,14 @@ let easyQuestions = [
     img: "assets/media/images/notes.jpg"
     },
     {
-    question: "What does Perrin bring with him from master Luhhan’s smithy when leaving Emond’s Field?",
+    question: "What does Perrin bring with him from Master Luhhan’s smithy when leaving Emond’s Field?",
     answers: ["War pick", "Heron marked blade", "Blacksmiths hammer", "Half moon axe"],
     corectAnswer: "Half moon axe",
     img: "assets/media/images/smithy.jpg"
     },
     {
     question: "Which of these colours does not belong to an Ajah of the White Tower?",
-    answers: ["green", "Purple", "Blue", "Red"],
+    answers: ["Green", "Purple", "Blue", "Red"],
     corectAnswer: "Purple",
     img: "assets/media/images/white-tower.jpg"
     },
@@ -84,13 +84,13 @@ let mediumQuestions = [
 
 let hardQuestions = [
     {
-    question: "When was Siuan Sanche  raised to the Amyrlin Seat?",
+    question: "When was Siuan Sanche raised to the Amyrlin Seat?",
     answers:["988 NE", "999 NE", "977 NE", "966 NE"],
     corectAnswer: "988 NE",
     img: "assets/media/images/white-tower.jpg"
     },
     {
-    question:"Fortuna’s full name is Fortuona Athaem Devi…?",
+    question:"Fortuona’s full name is Fortuona Athaem Devi…?",
     answers: ["Hawkwing", "Farshaw", "Paendrag", "Tamarath"],
     corectAnswer: "Paendrag",
     img: "assets/media/images/the-wheel-of-time-2.jpg"
@@ -114,7 +114,7 @@ let hardQuestions = [
     img: "assets/media/images/prophesy.jpg"
     },
     {
-    question: "Rands father by blood is?",
+    question: "Rand's father by blood is?",
     answers: ["Tam", "Janduin", "Rhuarc", "Mandelain"],
     corectAnswer: "Janduin",
     img: "assets/media/images/dad.jpg"

@@ -20,7 +20,7 @@ shuffle(mediumQuestions);
 shuffle(hardQuestions);
 
 /**
- * pics the correct question set for the selected game mode
+ * picks the correct question set for the selected game mode
  */
 let questionSet = [];
 function chooseQuestionList(modeSelect) {
@@ -50,7 +50,7 @@ function shuffle(array) {
 }
 
 /**
- * this adds the selected class to a answer button when clicked by the user.
+ * this adds the selected class to an answer button when clicked by the user.
  * also passes correct answer and mode to the checkanswer function.
  */
 function userAnswer(correctAns, mode) {
@@ -83,7 +83,7 @@ function checkAnswer(correctAns, mode) {
 
 /**
  * hides question box and shows correct answer box and text when called.
- * adds event lister to next button
+ * adds event listener to next button
  */
 function correctBox (mode) {
     let correctAnswerBox = document.getElementById("correct");
@@ -101,7 +101,7 @@ function correctBox (mode) {
 
 /**
  * hides question box and shows incorrect answer box and text when called.
- * adds event lister to next button
+ * adds event listener to next button
  */
 function incorrectBox (correctAns ,mode) {
     let incorrectMsg = document.getElementById("correct-span");
@@ -120,13 +120,13 @@ function incorrectBox (correctAns ,mode) {
 }
 
 /**
- * runs the dificulty level the user selects.
- * uses choosequestionlist function to generate correct question list
+ * runs the difficulty level the user selects.
+ * uses chooseQuestionlist function to generate correct question list
  * uses loadQuestion function to load questions and answers on to the html
  */
 function runGame(gameDif) {
 let difButtons = document.getElementById("dif-container");
-difButtons.style.display = "none"; //hides dificulty buttons when game is running.  
+difButtons.style.display = "none"; //hides difficulty buttons when game is running.  
     if (gameDif === "easy") {
         let mode = "easy";
         chooseQuestionList("easyMode");
@@ -144,7 +144,7 @@ difButtons.style.display = "none"; //hides dificulty buttons when game is runnin
 
 /**
  * loads questions and answers from chosen question set.
- * gets questions and answers from the shuffeld question set.
+ * gets questions and answers from the shuffled question set.
  * runs user answer function to check questions.
  * passed mode and correct answer to userAnswer function
  */
@@ -168,7 +168,7 @@ difButtons.style.display = "none"; //hides dificulty buttons when game is runnin
 }
 
 /**
- * code taken from code institiue love maths project.
+ * code taken from code institute love maths project.
  * gets current score from DOM and increments by 1
  */
 function correctScore() {
@@ -177,8 +177,8 @@ function correctScore() {
 }
 
 /**
- * code taken from code institiue love maths project.
- * gets current incorect score from DOM and increments by 1
+ * code taken from code institute love maths project.
+ * gets current incorrect score from DOM and increments by 1
  */
 function incorrectScore() {
     let score = parseInt(document.getElementById("incorrect-score").innerText);
@@ -194,8 +194,8 @@ function questionCounter () {
 }
 
 /**
- * brings up the end card when the desiered amount of questions have been answerd.
- * ands event listner to button and resets the page when clicked.
+ * brings up the end card when the desired amount of questions have been answered.
+ * adds event listener to button and resets the page when clicked.
  */
 function endQuiz() {
     let count =  parseInt(document.getElementById("question-counter").innerText);
