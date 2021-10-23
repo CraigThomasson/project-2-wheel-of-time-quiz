@@ -24,9 +24,9 @@
             <div class="col-12 difaculty center-text">
                 <div class="container">
                     <div class="row justify-content-center">
-                        <button class="col-8 col-sm-4 dif-btn" data-type="easy">Novice</button>
-                        <button class="col-8 col-sm-4 dif-btn" data-type="medium">Accepted</button>
-                        <button class="col-8 col-sm-4 dif-btn" data-type="hard">Aes Sedai</button>
+                        <button aria-label="Novice" class="col-8 col-sm-4 dif-btn" data-type="easy">Novice</button>
+                        <button aria-label="Accepted" class="col-8 col-sm-4 dif-btn" data-type="medium">Accepted</button>
+                        <button aria-label="Aes Sedai" class="col-8 col-sm-4 dif-btn" data-type="hard">Aes Sedai</button>
                     </div>
                 </div>
             </div>
@@ -51,19 +51,19 @@
             <!-- displays if correct answer is picked -->
             <div id="correct" class="card center-text box-shadow">
                 <h3>correct answer!</h3>
-                <button id="next-btn">Next</button>
+                <button aria-label="Next" id="next-btn">Next</button>
             </div>
             <!-- displays if incorrect answer is picked -->
             <div id="incorrect" class="card center-text box-shadow">
                 <h3>wrong answer!</h3>
                 <p id="incorrect-text">The correct answer was <span id="correct-span"></span>.</p>
-                <button id="incorrect-next-btn">Next</button>
+                <button aria-label="Next" id="incorrect-next-btn">Next</button>
             </div>
             <!-- displays when the quiz ends -->
             <div id="end-box" class="card center-text box-shadow">
                 <h3>The wheel weaves as the wheel wills, and although this is not the end, it is an ending.</h3>
                 <p>You scored: <span id="total"></span></p>
-                <button id="restart">A new beginning!</button>
+                <button aria-label="A new beginning" id="restart">A new beginning!</button>
             </div>
         </section>
     </div>
