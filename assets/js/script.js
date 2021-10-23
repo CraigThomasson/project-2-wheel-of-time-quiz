@@ -47,7 +47,7 @@ function shuffle(array) {
     // Swap elements
     [array[i], array[j]] = [array[j], array[i]];
     }
-    }
+}
 
 /**
  * this adds the selected class to a answer button when clicked by the user.
@@ -184,6 +184,7 @@ function incorrectScore() {
     let score = parseInt(document.getElementById("incorrect-score").innerText);
     document.getElementById("incorrect-score").innerText = ++score;
 }
+
 /**
  * updates the question counter
  */
