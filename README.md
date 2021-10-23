@@ -117,6 +117,7 @@ This project was deployed to git hub pages.
 
 ## Technologies used
 HTML, CSS and JavaScript.
+https://www.favicon.cc/ for favicon.
 
 ## credits 
 
@@ -146,9 +147,10 @@ HTML, CSS and JavaScript.
 
 ## acknowledgements
 
-* I would like to thank my mentor Chriss Quinn again for pushing me to produce my best work and being the best mentor that ever menteed. 
-* Thank you to every one in the Wheel of Time <a href="https://www.facebook.com/groups/2251256361856379">fan group</a> for all of there great feedback.
-* thanks to Matt Bodden 5p for helping me fix an issue with file baths for my images. 
+* I would like to thank my mentor Chriss Quinn again for pushing me to produce my best work and being the best mentor that ever menteed
+* Thank you to every one in the Wheel of Time <a href="https://www.facebook.com/groups/2251256361856379">fan group</a> for all of there great feedback
+* Thanks to Matt Bodden 5p for helping me fix an issue with file baths for my images
+* Thanks to David Bowers_5p and Eventyret_mentor for helping with favicons
 
 
 ### source
