@@ -93,7 +93,7 @@ let hardQuestions = [
     question:"Fortuna’s full name is Fortuona Athaem Devi…?",
     answers: ["Hawkwing", "Farshaw", "Paendrag", "Tamarath"],
     corectAnswer: "Paendrag",
-    img: "assets/media/images/The-Wheel-of-Time-2.jpg"
+    img: "assets/media/images/the-wheel-of-time-2.jpg"
     },
     {
     question: "What was the name of the university in the city of V'saine, in the Age of Legends?",
